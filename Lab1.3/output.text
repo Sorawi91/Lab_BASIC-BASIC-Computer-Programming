@@ -1,0 +1,15 @@
+Test Case 1
+    Enter two numbers and an operation code (1:Add, 2:Subtract, 3:Multiply 1 = + , 2 = - , 3 = * , 4 = /): 10 5 1
+    10 + 5 = 15
+
+Test Case 2
+    Enter two numbers and an operation code (1:Add, 2:Subtract, 3:Multiply 1 = + , 2 = - , 3 = * , 4 = /): 20 4 3
+    20 * 4 = 80
+
+Test Case 3
+    Enter two numbers and an operation code (1:Add, 2:Subtract, 3:Multiply 1 = + , 2 = - , 3 = * , 4 = /): 15 4 4 
+    15 / 4 = 3
+
+Test Case 4
+    Enter two numbers and an operation code (1:Add, 2:Subtract, 3:Multiply 1 = + , 2 = - , 3 = * , 4 = /): 10 5 5 
+    Invalid operation
