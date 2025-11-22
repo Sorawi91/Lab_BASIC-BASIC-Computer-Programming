@@ -1,0 +1,19 @@
+TestCase 1
+Input 1.zoneCode , 2.weight_kg: 
+Zone Code: 1=Local, 2=Regional, 3=International : 1 2.5
+50.00
+
+TestCase 2 
+Input 1.zoneCode , 2.weight_kg: 
+Zone Code: 1=Local, 2=Regional, 3=International : 2 15.0
+250.00
+
+TestCase 3 
+Input 1.zoneCode , 2.weight_kg: 
+Zone Code: 1=Local, 2=Regional, 3=International : 3 5.0
+500.00
+
+TestCase 4 
+Input 1.zoneCode , 2.weight_kg: 
+Zone Code: 1=Local, 2=Regional, 3=International : 4 10.0 
+Invalid Zone Code
