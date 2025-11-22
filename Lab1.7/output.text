@@ -1,0 +1,15 @@
+Test Case 1
+Enter customer type (1 for family, 2 for business) and consumption in kWh: 1 50
+150.00
+
+Test Case 2
+Enter customer type (1 for family, 2 for business) and consumption in kWh: 1  150
+450.00
+
+Test Case 3
+Enter customer type (1 for family, 2 for business) and consumption in kWh: 1 150
+600.00
+
+Test Case 4
+Enter customer type (1 for family, 2 for business) and consumption in kWh: 3 100
+Invalid Customer Type
