@@ -1,0 +1,20 @@
+Test Case 1
+    Please input your number you want: 2
+    Hello Loop!
+    Hello Loop!
+
+Test Case 2
+    Please input your number you want: 5
+    Hello Loop!
+    Hello Loop!
+    Hello Loop!
+    Hello Loop!
+    Hello Loop!
+
+Test Case 3
+    Please input your number you want: 0
+    Error
+
+Test Case 4
+    Please input your number you want: test
+    Error
