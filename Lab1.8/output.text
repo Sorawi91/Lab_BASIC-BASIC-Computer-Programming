@@ -1,0 +1,15 @@
+TestCase 1
+Please fill in two values (1.dayCode Monday(1) - Sunday(7) , 2.hour (0-23) : 2 10
+System Running (Workday)
+
+TestCase 2
+Please fill in two values (1.dayCode Monday(1) - Sunday(7) , 2.hour (0-23) : 1 20
+System Idle (Off-hours)
+
+TestCase 3
+Please fill in two values (1.dayCode Monday(1) - Sunday(7) , 2.hour (0-23) : 6 15
+Weekend Relax Mode
+
+TestCase 4
+Please fill in two values (1.dayCode Monday(1) - Sunday(7) , 2.hour (0-23) : 8 12
+Invalid Day Code
