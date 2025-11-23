@@ -1,0 +1,15 @@
+TestCase1
+Please fill in 1.ClearanceLevel , 2.age ,3.isActive (1 = Active , 2 = Inactive): 3 30 1
+Access GRANTED
+
+TestCase2
+Please fill in 1.ClearanceLevel , 2.age ,3.isActive (1 = Active , 2 = Inactive): 2 25 1
+Access GRANTED
+
+TestCase3
+Please fill in 1.ClearanceLevel , 2.age ,3.isActive (1 = Active , 2 = Inactive): 2 20 1
+Access DENIED
+
+TestCase4
+Please fill in 1.ClearanceLevel , 2.age ,3.isActive (1 = Active , 2 = Inactive): 3 30 0
+Access DENIED
