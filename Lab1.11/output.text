@@ -1,0 +1,17 @@
+TestCase1 
+Please fill  1.Pirce_Before_vat , 2.CategoryCode : 1000.00 1
+VAT Amount: 70.00
+Total Price: 1070.00
+
+TestCase2 
+Please fill  1.Pirce_Before_vat , 2.CategoryCode : 500.00 3
+VAT Amount: 75.00
+Total Price: 575.00
+
+TestCase3
+VAT Amount: 0.00
+Total Price: 200.00
+
+TestCase4 
+Please fill  1.Pirce_Before_vat , 2.CategoryCode : 50.00 5
+Invalid Category Total_Price = 0.00 
