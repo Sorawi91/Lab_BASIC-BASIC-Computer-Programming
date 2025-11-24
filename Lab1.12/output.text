@@ -1,0 +1,15 @@
+TestCase1
+Plsese Fill 1.PlanCode(1.Basic Plan , 2.Premium Plan) 2.dataUsage_GB: 1 15.0
+349.00
+
+TestCase2
+Plsese Fill 1.PlanCode(1.Basic Plan , 2.Premium Plan) 2.dataUsage_GB: 2 15.0
+599.00
+
+TestCase3
+Plsese Fill 1.PlanCode(1.Basic Plan , 2.Premium Plan) 2.dataUsage_GB: 2 30.0
+699.00
+
+TestCase4
+Plsese Fill 1.PlanCode(1.Basic Plan , 2.Premium Plan) 2.dataUsage_GB: 3 50.0
+Invalid Plan Code
