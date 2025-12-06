@@ -1,0 +1,15 @@
+TestCase1
+plsese input termCode and investmentAmount: 1 6000.00
+240.00
+
+Test1Case2
+plsese input termCode and investmentAmount: 2 8000.00
+400.00
+
+TestCase3
+plsese input termCode and investmentAmount: 2 12000.00
+780.00
+
+TestCase4
+plsese input termCode and investmentAmount: 4 1000.00
+Invalid Term Code
