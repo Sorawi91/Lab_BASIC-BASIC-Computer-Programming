@@ -1,0 +1,25 @@
+Test Case1
+Plsese Fill How many unit you buy: 3
+Plsese Fill unitprice and quantity [1]: 1200.00 1
+Plsese Fill unitprice and quantity [2]: 500.00 2
+Plsese Fill unitprice and quantity [3]: 1000.00 3
+Grand Total: 4780.00
+
+Test Case2
+Plsese Fill How many unit you buy: 2
+Plsese Fill unitprice and quantity [1]: 2000.00 5
+Plsese Fill unitprice and quantity [2]: 50.00 10
+Grand Total: 9500.00
+
+Test Case3
+Plsese Fill How many unit you buy: 4 
+Plsese Fill unitprice and quantity [1]: 500.00 1
+Plsese Fill unitprice and quantity [2]: 500.00 1
+Plsese Fill unitprice and quantity [3]: 500.00 1
+Plsese Fill unitprice and quantity [4]: 500.00 1
+Grand Total: 2000.00
+
+Test Case4
+Plsese Fill How many unit you buy: 1 
+Plsese Fill unitprice and quantity [1]: 1500.00 10
+Grand Total: 13500.00
