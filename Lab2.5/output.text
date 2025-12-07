@@ -1,0 +1,50 @@
+TestCase 1
+Enter your Score [1]: 95  
+Enter your Score [2]: 75
+Enter your Score [3]: 40
+Enter your Score [4]: 60
+Enter your Score [5]: -1
+Grade A Count: 1
+Grade B Count: 1
+Grade C Count: 1
+Grade D Count: 0
+Grade F Count: 1
+
+TestCase 2
+Enter your Score [1]: 80
+Enter your Score [2]: 85
+Enter your Score [3]: 90
+Enter your Score [4]: -1
+Grade A Count: 3
+Grade B Count: 0
+Grade C Count: 0
+Grade D Count: 0
+Grade F Count: 0
+
+TestCase 3
+Enter your Score [1]: 79
+Enter your Score [2]: 50
+Enter your Score [3]: 49
+Enter your Score [4]: 70
+Enter your Score [5]: -1
+Grade A Count: 0
+Grade B Count: 2
+Grade C Count: 0
+Grade D Count: 1
+Grade F Count: 1
+
+TestCase 4
+Enter your Score [1]: 0
+Enter your Score [2]: 100
+Enter your Score [3]: 55
+Enter your Score [4]: 65
+Enter your Score [5]: -1
+Grade A Count: 1
+Grade B Count: 0
+Grade C Count: 1
+Grade D Count: 1
+Grade F Count: 1
+
+Testcase 5 Error
+Enter your Score [1]: d
+Pleses try again
