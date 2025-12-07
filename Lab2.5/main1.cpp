@@ -1,12 +1,13 @@
 #include <stdio.h>
 
+//made test funtion
 void studentscroe (int *s , int *i , int *CA , int *CB , int *CC , int *CD , int *CF);
 
 int main () {
     int score , i = 0;
-    int CountA = 0 , CountB = 0 , CountC = 0 , CountD = 0 , CountF = 0;
+    int CountA = 0 , CountB = 0 , CountC = 0 , CountD = 0 , CountF = 0; //
 
-    studentscroe(&score,&i,&CountA,&CountB,&CountC,&CountD,&CountF);
+    studentscroe(&score,&i,&CountA,&CountB,&CountC,&CountD,&CountF); //send adress of value 
     
     return 0;
 }
@@ -38,7 +39,7 @@ void studentscroe ( int *s , int *i , int *CA , int *CB , int *CC , int *CD , in
         *i = *i + 1;
     }
 
-    if (*s == -1) {
+    if (*s == -1) { //display Grade for people
         printf("Grade A Count: %d people\n",*CA);
 
         printf("Grade C Count: %d people\n",*CB);
