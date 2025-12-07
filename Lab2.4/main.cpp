@@ -8,7 +8,7 @@ int main () {
     if (scanf("%f %f",&principal,&monthlyPayment) != 2) {
         printf("Plsese try again!\n");
         printf("----------------------------------------------------------");
-        return 1;
+        return 0;
     }
 
     while (principal > 0) {
@@ -25,8 +25,9 @@ int main () {
 
         if (monthCount > 10) {
             printf("Loan settled in 10+ months.");
-            return 1;
+            return 0;
         }
     } 
     printf("Loan settled in %d months",monthCount);
 }
+
