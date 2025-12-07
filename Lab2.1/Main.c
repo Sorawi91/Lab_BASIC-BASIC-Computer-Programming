@@ -1,11 +1,9 @@
 #include <stdio.h>
 
-int main()
-{
+int main () {
     int n;
 
     printf("Pls Fill Number: ");
-    
     scanf("%d",&n);
 
     for (int i = 0; i < n; i++){
