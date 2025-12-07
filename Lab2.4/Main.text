@@ -1,0 +1,53 @@
+Testcase 1
+Fill principal and monthlyPayment: 1000.00 110.00
+Month [1]: Remaining 900.00
+Month [2]: Remaining 799.00
+Month [3]: Remaining 696.99
+Month [4]: Remaining 593.96
+Month [5]: Remaining 489.90
+Month [6]: Remaining 384.80
+Month [7]: Remaining 278.65
+Month [8]: Remaining 171.43
+Month [9]: Remaining 63.15
+Month [10]: Remaining -46.22
+
+TestCase 2
+Fill principal and monthlyPayment: 500.00 5.00   
+Month [1]: Remaining 500.00
+Month [2]: Remaining 500.00
+Month [3]: Remaining 500.00
+Month [4]: Remaining 500.00
+Month [5]: Remaining 500.00
+Month [6]: Remaining 500.00
+Month [7]: Remaining 500.00
+Month [8]: Remaining 500.00
+Month [9]: Remaining 500.00
+Month [10]: Remaining 500.00
+Month [11]: Remaining 500.00
+Loan settled in 10+ months.
+
+TestCase 3
+Fill principal and monthlyPayment: 100.00 100.00
+Month [1]: Remaining 1.00
+Month [2]: Remaining -98.99
+Loan settled in 2 months
+
+TestCase 4
+Fill principal and monthlyPayment: 100000.00 1000.00
+Month [1]: Remaining 100000.00
+Month [2]: Remaining 100000.00
+Month [3]: Remaining 100000.00
+Month [4]: Remaining 100000.00
+Month [5]: Remaining 100000.00
+Month [6]: Remaining 100000.00
+Month [7]: Remaining 100000.00
+Month [8]: Remaining 100000.00
+Month [9]: Remaining 100000.00
+Month [10]: Remaining 100000.00
+Month [11]: Remaining 100000.00
+Loan settled in 10+ months.
+
+TestCase 5 Error
+Fill principal and monthlyPayment: d
+Plsese try again!
+----------------------------------------------------------
