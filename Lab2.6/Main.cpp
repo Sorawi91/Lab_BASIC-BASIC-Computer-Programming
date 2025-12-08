@@ -1,43 +1,38 @@
 #include <stdio.h>
 
-void money(int *N, int *n, int *s, float *dD, float *mT, float *cD);
-
 int main() {
-    int N_MONTHS, month, successCount = 0; //กำหนดตัวเเปล
-    float dailyDeposit, monthlyTotal, currentDeposit;
+    int N_MONTHS;
+    int successCount = 0;
+    float monthlyTotal;
+    float currentDeposit;
 
-    if (scanf("%d", &N_MONTHS) != 1) { //ถ้ากรอกมาเกินสองค่าจะจบการทำงาน
-        return 0;
+    if (scanf("%d", &N_MONTHS) != 1) {
+        return 1;
     }
 
-    money(&N_MONTHS, &month, &successCount, &dailyDeposit, &monthlyTotal, &currentDeposit); //ส่งค่าตัวเเปรไปในฟังชั่นเป็นอากูเม้น
+    for (int i = 0; i < N_MONTHS; i++) {
+        monthlyTotal = 0.0;
+
+        while (1) {
+            if (scanf("%f", &currentDeposit) != 1) {
+                return 1;
+            }
+
+            if (currentDeposit == 0.00) {
+                break;
+            }
+
+            monthlyTotal += currentDeposit;
+        }
+
+        printf("Month %d Total: %.2f\n", i + 1, monthlyTotal);
+
+        if (monthlyTotal >= 500.00) {
+            successCount++;
+        }
+    }
 
     printf("Success Count: %d\n", successCount);
 
     return 0;
-}
-
-void money(int *NM, int *m, int *s, float *dD, float *mT, float *cD) {
-
-    for (int i = 0; i < *NM; i++) {
-        *mT = 0.0;
-
-        while (1) {
-            if (scanf("%f", &*cD) != 1) {
-                return;
-            }
-
-            if (*cD == 0.00) { // ถ้าเจอ 0.00 ให้หยุด loop ข้างในเเละออกไป for นอก
-                break;
-            }
-
-            *mT = *mT + *cD;
-        }
-
-        printf("Month %d Total: %.2f\n", i + 1, *mT);
-
-        if (*mT >= 500.00) {
-            (*s)++;
-        }
-    }
 }
