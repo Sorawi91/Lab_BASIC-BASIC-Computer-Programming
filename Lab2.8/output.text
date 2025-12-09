@@ -1,0 +1,49 @@
+Testcase 1
+ Number for Loop student score: 3
+Enter studentId , score , totalClasses absentClasses for student [1] 101 90 20 2
+PASS Low Attendance(90.00)
+Enter studentId , score , totalClasses absentClasses for student [2] 102 45 20 1
+FAIL Score is too low
+Enter studentId , score , totalClasses absentClasses for student [3] 103 80 20 6
+FAIL Low Attendance(70.00)
+
+--- Summary ---
+Total Pass: 1
+Total Fail: 2
+
+Testcase 2 
+Number for Loop student score: 2
+Enter studentId , score , totalClasses absentClasses for student [1] 201 49 10 3
+FAIL Both Score and Attendance low
+Enter studentId , score , totalClasses absentClasses for student [2] 202 50 10 3
+FAIL Low Attendance(70.00)
+
+--- Summary ---
+Total Pass: 0
+Total Fail: 2
+
+Testcase 3 
+Number for Loop student score: 4
+Enter studentId , score , totalClasses absentClasses for student [1] 301 95 10 0 
+PASS Low Attendance(100.00)
+Enter studentId , score , totalClasses absentClasses for student [2] 302 50 10 2
+PASS Low Attendance(80.00)
+Enter studentId , score , totalClasses absentClasses for student [3] 303 100 10 2
+PASS Low Attendance(80.00)
+Enter studentId , score , totalClasses absentClasses for student [4] 304 50 10 0
+PASS Low Attendance(100.00)
+
+--- Summary ---
+Total Pass: 4
+Total Fail: 0
+
+Testcase 4 
+Number for Loop student score: 2   
+Enter studentId , score , totalClasses absentClasses for student [1] 401 10 10 9
+FAIL Both Score and Attendance low
+Enter studentId , score , totalClasses absentClasses for student [2] 402 10 10 0
+FAIL Score is too low
+
+--- Summary ---
+Total Pass: 0
+Total Fail: 2
