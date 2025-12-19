@@ -1,0 +1,15 @@
+Testcase1
+101 500.50 Laptop
+ID: 101,Price: 500.50, Name: Laptop
+
+Testcase2
+205 10.00 Pen
+ID: 205,Price: 10.00, Name: Pen
+
+Testcase3
+333 9999.99 Server
+ID: 333,Price: 9999.99, Name: Server
+
+Testcase4
+4 0.5 Screw
+ID: 4,Price: 0.50, Name: Screw
