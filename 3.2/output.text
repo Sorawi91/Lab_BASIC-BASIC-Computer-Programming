@@ -1,0 +1,51 @@
+Testcase1
+2
+101
+85.5
+Alice
+202
+70.0
+Bob
+ID: 101,Score: 85.50,Name: Alice
+ID: 202,Score: 70.00,Name: Bob
+
+Testcase2
+3
+301
+60.0
+Charlie
+404
+95.0
+David
+505
+45.0
+Eve
+ID: 301,Score: 60.00,Name: Charlie
+ID: 404,Score: 95.00,Name: David
+ID: 505,Score: 45.00,Name: Eve
+
+Testcase3
+1
+1
+100.0
+Solo
+ID: 1,Score: 100.00,Name: Solo
+
+Testcase4
+4
+11
+88.8
+A
+22
+77.7
+B
+33
+66.6
+C
+44
+55.5
+D
+ID: 11,Score: 88.80,Name: A
+ID: 22,Score: 77.70,Name: B
+ID: 33,Score: 66.60,Name: C
+ID: 44,Score: 55.50,Name: D
