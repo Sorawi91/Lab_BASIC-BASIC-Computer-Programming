@@ -1,0 +1,77 @@
+testCase1
+100
+50.00
+5
+1
+50
+Received 50 units.
+2
+30
+Shipped 30 units.
+2
+130
+FAILURE: insufficent stock. PENALTY 50.00 added.
+3
+0
+Stock: 120 units
+TotalPenalties: 50.00
+
+testCase2
+
+50
+100.00
+6
+1
+10
+Received 10 units.
+2
+60
+Shipped 60 units.
+3
+0
+Current Stock: 0
+Total Penalties: 0.00
+2
+1
+FAILURE: Insufficent stock. PENALTY 100.00 added.
+2
+1
+FAILURE: Insufficent stock. PENALTY 100.00 added.
+
+testCase3
+
+20
+50.00
+5
+2
+-5
+Error: Quantity must be positive.
+1
+10
+Received 10 units.
+4
+1
+Error invalid Command.
+3
+0
+Current Stock: 30
+Total Penalties: 0.00
+
+testCase4
+
+1
+1000.00
+4
+2
+50
+FAILURE: Insufficent stock. PENALTY 1000.00 added.
+2
+1
+Shipped 1 units.
+1
+5
+Received 5 units.
+3
+0
+Current Stock: 5
+Total Penalties: 1000.00

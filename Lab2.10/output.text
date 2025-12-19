@@ -1,0 +1,117 @@
+Testcase 1 
+
+500.00
+20.00
+4
+Starting Balance: 500.00
+1
+100.00
+--- Month 1 ---
+Deposit: 100.00
+3 
+0.0
+--- Month 2 ---
+Interest: 0.50 (Rate: 1.00%)
+2
+800.00
+--- Month 3 ---
+WITHDRAWAL FAILED. Penalty 20.00 applied.
+3
+0.0
+--- Month 4 ---
+Interest: 0.50 (Rate: 1.00%)
+Final Balance: 601.00
+Total Penalties: 20.00
+PS C:\Users\09668\Documents\Vscode\BasicProgarming\BasicPart2\Lab2.10> ^C
+PS C:\Users\09668\Documents\Vscode\BasicProgarming\BasicPart2\Lab2.10>
+PS C:\Users\09668\Documents\Vscode\BasicProgarming\BasicPart2\Lab2.10>  & 'c:\Users\09668\.vscode\extensions\ms-vscode.cpptools-1.29.3-win32-x64\debugAdapters\bin\WindowsDebugLauncher.exe' '--stdin=Microsoft-MIEngine-In-ngtgtpta.vma' '--stdout=Microsoft-MIEngine-Out-eunf0khj.rac' '--stderr=Microsoft-MIEngine-Error-nwhzjitd.to3' '--pid=Microsoft-MIEngine-Pid-n2hn3onz.1wq' '--dbgExe=C:\msys64\ucrt64\bin\gdb.exe' '--interpreter=mi'
+
+500.00
+20.00
+4
+Starting Balance: 500.00
+1
+100.00
+--- Month 1 ---
+Deposit: 100.00
+3
+0.0
+--- Month 2 ---
+Interset: 0.50 (Rate: 1.00%)
+2
+800.00
+--- Month 3 ---
+WITHDRAWAL FAILED. Penalty 20.00 applied.
+3
+0.0
+--- Month 4 ---
+Interset: 0.50 (Rate: 1.00%)
+Final Balance: 601.00
+Total Penalties: 20.00
+
+Testcase 2
+
+1000.00
+50.00
+3
+Starting Balance: 1000.00
+3
+0.0 
+--- Month 1 ---
+Interset: 2.08 (Rate: 2.50%)
+1
+500.00
+--- Month 2 ---
+Deposit: 500.00
+3
+0.0
+--- Month 3 ---
+Interset: 3.13 (Rate: 2.50%)
+Final Balance: 1505.21
+Total Penalties: 0.00
+
+Testcase 3
+
+50.00
+10.00
+5
+Starting Balance: 50.00
+2
+100.00
+--- Month 1 ---
+WITHDRAWAL FAILED. Penalty 10.00 applied.
+1
+10.00
+--- Month 2 ---
+Deposit: 10.00
+2
+10.00
+--- Month 3 ---
+Withdrawal: 10.00
+3
+0.0
+--- Month 4 ---
+Interset: 0.04 (Rate: 1.00%)
+2
+1.00
+--- Month 5 ---
+Withdrawal: 1.00
+Final Balance: 49.04
+Total Penalties: 10.00
+
+Testcase 4
+
+10000.00
+0.00
+2
+Starting Balance: 10000.00
+3
+0.0
+--- Month 1 ---
+Interset: 20.83 (Rate: 2.50%)
+4
+10.00
+--- Month 2 ---
+Error: Invalid Command.
+Final Balance: 10020.83
+Total Penalties: 0.00
