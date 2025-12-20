@@ -1,0 +1,51 @@
+Testcase1
+
+3
+101
+85.0
+Alice
+202
+59.9
+Bob
+303
+60.0
+Charlie
+Pass Count: 2
+Fail Count: 1
+
+Testcase2
+
+4
+404
+10.0
+David
+505
+100.0
+Eve
+606
+0.0
+Frank
+707
+75.5
+Grace
+Pass Count: 2
+Fail Count: 2
+
+Testcase3
+1
+1
+59.99
+Solo
+Pass Count: 0
+Fail Count: 1
+
+Testcase4
+2
+1
+60.0
+A
+2
+60.0
+B
+Pass Count: 2
+Fail Count: 0
