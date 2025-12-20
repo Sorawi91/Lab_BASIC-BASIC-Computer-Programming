@@ -51,7 +51,8 @@ int main () {
                 Interest = currentBalance * (APR / 100.0) / 12.0;
                 currentBalance += Interest;
 
-                printf("Interset: %.2f (Rate: %.2f%%)\n",Interest,APR);
+                // แก้ไขคำผิด: Interset -> Interest
+                printf("Interest: %.2f (Rate: %.2f%%)\n",Interest,APR);
             break;
 
             default: //Error
@@ -63,4 +64,5 @@ int main () {
     printf("Final Balance: %.2f\n",currentBalance);
     printf("Total Penalties: %.2f\n",totalPenalties);
     return 0;
+
 }
