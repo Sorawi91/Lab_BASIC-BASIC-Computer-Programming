@@ -1,0 +1,33 @@
+Testcase1
+3
+101
+80.0
+Alice
+202
+90.0
+Bob
+303
+70.0
+Charlie
+Average Score: 80.00
+
+Testcase2
+2
+404
+50.0
+David
+505
+100.0
+Eve
+Average Score: 75.00
+
+Testcase3
+1
+1
+65.5
+Solo
+Average Score: 65.50
+
+Testcase4
+0
+Average Score: 0.00
