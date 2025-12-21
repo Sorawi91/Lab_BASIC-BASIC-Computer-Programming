@@ -1,0 +1,55 @@
+2
+SummerSale 100.00 25 300.00
+--- Campaign: SummerSale ---
+Sales: 25, Ad Spend: 300.00
+Rate Used: 20%
+Calculation: (2500.00 * 20%) - 300.00 = 200.00
+Net Result: 200.00
+WinterLaunch 500.00 12 800.00
+--- Campaign: WinterLaunch ---
+Sales: 12, Ad Spend: 800.00
+Rate Used: 15%
+Calculation: (6000.00 * 15%) - 800.00 = 100.00
+Net Result: 100.00
+
+2
+LowVolume 50.00 5 30.00
+--- Campaign: LowVolume ---
+Sales: 5, Ad Spend: 30.00
+Rate Used: 10%
+Calculation: (250.00 * 10%) - 30.00 = -5.00
+Net Result: -5.00
+HighRisk 2000.00 30 10000.00
+--- Campaign: HighRisk ---
+Sales: 30, Ad Spend: 10000.00
+Rate Used: 20%
+Calculation: (60000.00 * 20%) - 10000.00 = 2000.00
+Net Result: 2000.00
+
+3
+Border10 100.00 10 150.00
+--- Campaign: Border10 ---
+Sales: 10, Ad Spend: 150.00
+Rate Used: 15%
+Calculation: (1000.00 * 15%) - 150.00 = 0.00
+Net Result: 0.00
+Border20 100.00 19 250.00
+--- Campaign: Border20 ---
+Sales: 19, Ad Spend: 250.00
+Rate Used: 15%
+Calculation: (1900.00 * 15%) - 250.00 = 35.00
+Net Result: 35.00
+ZeroSale 10.00 0 1.00
+--- Campaign: ZeroSale ---
+Sales: 0, Ad Spend: 1.00
+Rate Used: 10%
+Calculation: (0.00 * 10%) - 1.00 = -1.00
+Net Result: -1.00
+
+1
+LargeProduct 5000.00 20 15000.00
+--- Campaign: LargeProduct ---
+Sales: 20, Ad Spend: 15000.00
+Rate Used: 20%
+Calculation: (100000.00 * 20%) - 15000.00 = 5000.00
+Net Result: 5000.00
