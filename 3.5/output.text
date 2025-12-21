@@ -1,0 +1,34 @@
+Testcase1
+2
+101
+450.00
+1
+202
+100.00
+3
+Grand Total: 800.00
+
+Testcase2
+3
+301
+100.00
+1
+402
+100.00
+3
+503
+50.00
+1
+Grand Total: 600.00
+
+Testcase3
+1
+1000.00
+1
+Grand Total: 50.00
+
+Testcase4
+1
+450.00
+0
+Grand Total: 50.00
