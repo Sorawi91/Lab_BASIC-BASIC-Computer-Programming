@@ -1,0 +1,23 @@
+4
+20 10 30
+SUCCESS! Net Damage: 160.00
+25 15 50
+SUCCESS! Net Damage: 150.00
+20 5 70
+FAIL. Deficit: 30.00
+15 8 10
+FAIL. Deficit: 30.00
+
+2
+20 10 30
+SUCCESS! Net Damage: 160.00
+25 15 50
+SUCCESS! Net Damage: 150.00
+
+1
+18 15 60
+FAIL. Deficit: 42.00
+
+1    
+15 8 10
+FAIL. Deficit: 30.00
