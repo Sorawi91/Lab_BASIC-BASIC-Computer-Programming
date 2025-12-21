@@ -1,0 +1,60 @@
+2
+--- RECEIPT ---
+Coffee
+50.00
+2
+Coffee x 2 = 100.00
+Milk
+65.00
+1
+Milk x 1 = 65.00
+-------------
+Subtotal: 165.00
+VAT (7%): 11.55
+Grand Total: 176.55
+
+
+3
+--- RECEIPT ---
+Pen
+10.00
+5
+Pen x 5 = 50.00
+Notebook
+120.00
+1
+Notebook x 1 = 120.00
+Sticker
+5.00
+10
+Sticker x 10 = 50.00
+-------------
+Subtotal: 220.00
+VAT (7%): 15.40
+Grand Total: 235.40
+
+1
+--- RECEIPT ---
+Server
+500000.00
+1
+Server x 1 = 500000.00
+-------------
+Subtotal: 500000.00
+VAT (7%): 35000.00
+Grand Total: 535000.00
+
+2
+--- RECEIPT ---
+ZeroItem
+0.00
+10
+ZeroItem x 10 = 0.00
+CheapItem
+1.00
+2
+CheapItem x 2 = 2.00
+-------------
+Subtotal: 2.00
+VAT (7%): 0.14
+Grand Total: 2.14
