@@ -1,0 +1,25 @@
+Testcase1
+4
+1000.00 1250.00 Alice
+1000.00 1000.00 Bob
+1000.00 800.00 Charlie
+1000.00 950.00 David
+Grand Total Commission: 550.00
+
+Testcase2
+2
+5000.00 6000.00 Eve
+5000.00 4499.00 Frank
+Grand Total Commission: 1149.90
+
+Testcase3
+3
+100.00 89.99 Grace
+100.00 120.00 Henry
+100.00 70.00 Lris 
+Grand Total Commission: 28.00
+
+Testcase4
+1
+10000.00 13000.00 John
+Grand Total Commission: 1500.00
