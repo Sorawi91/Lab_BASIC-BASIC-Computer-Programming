@@ -1,0 +1,107 @@
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 1
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 2
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 4
+Total due: 25.00
+Enter paid amount: 30.00
+Purchase successful. Change: 5.00
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 50.00
+Select item (1-4): 3
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 50.00
+Select item (1-4): 3
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 50.00
+Select item (1-4): 4
+Total due: 50.00
+Enter paid amount: 60.00
+Purchase successful. Change: 10.00
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 1
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 2
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 25.00
+Select item (1-4): 4
+Total due: 25.00
+Enter paid amount: 20.00
+Insufficient payment. Purchase cancelled.
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 15.00
+Select item (1-4): 5
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 15.00
+Select item (1-4): 1
+
+--- Vending Machine ---
+1. Coke (15.00)
+2. Water (10.00)
+3. Snack (25.00)
+4. Exit and Pay
+Current Total: 15.00
+Select item (1-4): 4
+Total due: 15.00
+Enter paid amount: 20.00
+Purchase successful. Change: 5.00
