@@ -1,0 +1,46 @@
+---------------------------------------------------------------
+Enter 5 integer numbers for sorting:
+Element 1: 50
+Element 2: 20
+Element 3: 40
+Element 4: 10
+Element 5: 30
+
+--- ARRAY SORTING REPORT ---
+Original Array: 50 20 40 10 30
+Sorted Array (Ascending): 10 20 30 40 50
+
+---------------------------------------------------------------
+Enter 5 integer numbers for sorting:
+Element 1: 1
+Element 2: 2
+Element 3: 3
+Element 4: 4
+Element 5: 5
+
+--- ARRAY SORTING REPORT ---
+Original Array: 1 2 3 4 5
+Sorted Array (Ascending): 1 2 3 4 5
+---------------------------------------------------------------
+Enter 5 integer numbers for sorting:
+Element 1: 10
+Element 2: 5 
+Element 3: 20
+Element 4: 5
+Element 5: 10
+
+--- ARRAY SORTING REPORT ---
+Original Array: 10 5 20 5 10
+Sorted Array (Ascending): 5 5 10 10 20
+---------------------------------------------------------------
+Enter 5 integer numbers for sorting:
+Element 1: 99
+Element 2: 88
+Element 3: 77
+Element 4: 66
+Element 5: 55
+
+--- ARRAY SORTING REPORT ---
+Original Array: 99 88 77 66 55
+Sorted Array (Ascending): 55 66 77 88 99
+---------------------------------------------------------------
