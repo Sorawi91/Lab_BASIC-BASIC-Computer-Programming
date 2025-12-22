@@ -1,0 +1,53 @@
+-----------------------------------------------------------
+Enter IDs for 4 students:
+Student 1 ID: 1001
+Student 2 ID: 1005
+Student 3 ID: 1010
+Student 4 ID: 1020
+
+Enter ID to search: 1001
+
+--- ID SEARCH REPORT ---
+Recorded IDs: 1001 1005 1010 1020
+Search ID: 1001
+1ID FOUND int the system
+-----------------------------------------------------------
+Enter IDs for 4 students:
+Student 1 ID: 200
+Student 2 ID: 201
+Student 3 ID: 202
+Student 4 ID: 203
+
+Enter ID to search: 500
+
+--- ID SEARCH REPORT ---
+Recorded IDs: 200 201 202 203
+Search ID: 500
+ID NOT FOUND in the system
+-----------------------------------------------------------
+Enter IDs for 4 students:
+Student 1 ID: 30
+Student 2 ID: 31
+Student 3 ID: 32
+Student 4 ID: 33
+
+Enter ID to search: 32
+
+--- ID SEARCH REPORT ---
+Recorded IDs: 30 31 32 33
+Search ID: 32
+ID FOUND int the system
+-----------------------------------------------------------
+Enter IDs for 4 students:
+Student 1 ID: 111
+Student 2 ID: 222
+Student 3 ID: 333
+Student 4 ID: 444
+
+Enter ID to search: 112
+
+--- ID SEARCH REPORT ---
+Recorded IDs: 111 222 333 444
+Search ID: 112
+ID NOT FOUND in the system
+-----------------------------------------------------------
