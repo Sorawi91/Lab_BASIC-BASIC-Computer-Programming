@@ -1,0 +1,42 @@
+-----------------------------------------
+Enter Total Cost (integer): 1357
+Enter Amount Paid (integer): 2000
+
+--- CHANGE CALCULATION REPORT ---
+Total Cost: 1357
+Amount Paid: 2000
+Change Amount: 643
+
+Denomination Breakdown:
+500 Baht: 1
+100 Baht: 1
+20 Baht: 2
+2 Baht: 1
+1 Baht: 1
+-----------------------------------------
+Enter Total Cost (integer): 555
+Enter Amount Paid (integer): 555
+
+--- CHANGE CALCULATION REPORT ---
+Total Cost: 555
+Amount Paid: 555
+Change Amount: 0
+
+Denomination Breakdown:
+-----------------------------------------
+Enter Total Cost (integer): 1000
+Enter Amount Paid (integer): 5000
+
+--- CHANGE CALCULATION REPORT ---
+Total Cost: 1000
+Amount Paid: 5000
+Change Amount: 4000
+
+Denomination Breakdown:
+1000 Baht: 4
+-----------------------------------------
+Enter Total Cost (integer): 800
+Enter Amount Paid (integer): 700
+
+ERROR: Amount Paid is less than Total Cost.
+-----------------------------------------
