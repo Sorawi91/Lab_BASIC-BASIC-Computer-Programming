@@ -1,0 +1,101 @@
+------------------------------------------
+Enter data for 4 employees:
+--- Employee 1 ---
+Enter ID: 101
+Enter Salary: 30000
+--- Employee 2 ---
+Enter ID: 102
+Enter Salary: 50000
+--- Employee 3 ---
+Enter ID: 103
+Enter Salary: 25000
+--- Employee 4 ---
+Enter ID: 104
+Enter Salary: 60000
+
+--- EMPLOYEE SALARY SUMMARY ---
+ID     | Salary
+-------|---------
+101    | 30000
+102    | 50000
+103    | 25000
+104    | 60000
+
+Maximum Salary Found: 60000
+Minimum Salary Found: 25000
+------------------------------------------
+Enter data for 4 employees:
+--- Employee 1 ---
+Enter ID: 201
+Enter Salary: 50000
+--- Employee 2 ---
+Enter ID: 202
+Enter Salary: 40000
+--- Employee 3 ---
+Enter ID: 203
+Enter Salary: 30000
+--- Employee 4 ---
+Enter ID: 204
+Enter Salary: 20000
+
+--- EMPLOYEE SALARY SUMMARY ---
+ID     | Salary
+-------|---------
+201    | 50000
+202    | 40000
+203    | 30000
+204    | 20000
+
+Maximum Salary Found: 50000
+Minimum Salary Found: 20000
+------------------------------------------
+Enter data for 4 employees:
+--- Employee 1 ---
+Enter ID: 301
+Enter Salary: 35000
+--- Employee 2 ---
+Enter ID: 302
+Enter Salary: 35000 
+--- Employee 3 ---
+Enter ID: 303
+Enter Salary: 35000
+--- Employee 4 ---
+Enter ID: 304
+Enter Salary: 35000
+
+--- EMPLOYEE SALARY SUMMARY ---
+ID     | Salary
+-------|---------
+301    | 35000
+302    | 35000
+303    | 35000
+304    | 35000
+
+Maximum Salary Found: 35000
+Minimum Salary Found: 35000
+------------------------------------------
+Enter data for 4 employees:
+--- Employee 1 ---
+Enter ID: 401
+Enter Salary: 15000
+--- Employee 2 ---
+Enter ID: 402
+Enter Salary: 80000 
+--- Employee 3 ---
+Enter ID: 403
+Enter Salary: 10000
+--- Employee 4 ---
+Enter ID: 404
+Enter Salary: 40000
+
+--- EMPLOYEE SALARY SUMMARY ---
+ID     | Salary
+-------|---------
+401    | 15000
+402    | 80000
+403    | 10000
+404    | 40000
+
+Maximum Salary Found: 80000
+Minimum Salary Found: 10000
+------------------------------------------
