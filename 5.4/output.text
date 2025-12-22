@@ -1,0 +1,81 @@
+----------------------------------------------------------------
+Enter data for 3 students:
+--- Student 1 ---
+Enter ID: 101
+Enter Score: 95
+--- Student 2 ---
+Enter ID: 102
+Enter Score: 80
+--- Student 3 ---
+Enter ID: 103
+Enter Score: 90
+
+--- STUDENT SCORE REPORT ---
+ID     | Score
+-------|-------
+101    | 95
+102    | 80
+103    | 90
+
+TOP PERFORMER ID: 101
+----------------------------------------------------------------
+Enter data for 3 students:
+--- Student 1 ---
+Enter ID: 201
+Enter Score: 70
+--- Student 2 ---
+Enter ID: 202
+Enter Score: 85
+--- Student 3 ---
+Enter ID: 203
+Enter Score: 99
+
+--- STUDENT SCORE REPORT ---
+ID     | Score
+-------|-------
+201    | 70
+202    | 85
+203    | 99
+
+TOP PERFORMER ID: 203
+----------------------------------------------------------------
+Enter data for 3 students:
+--- Student 1 ---
+Enter ID: 301
+Enter Score: 90
+--- Student 2 ---
+Enter ID: 302
+Enter Score: 90
+--- Student 3 ---
+Enter ID: 303
+Enter Score: 85
+
+--- STUDENT SCORE REPORT ---
+ID     | Score
+-------|-------
+301    | 90
+302    | 90
+303    | 85
+
+TOP PERFORMER ID: 301
+----------------------------------------------------------------
+Enter data for 3 students:
+--- Student 1 ---
+Enter ID: 401
+Enter Score: 50
+--- Student 2 ---
+Enter ID: 402
+Enter Score: 45
+--- Student 3 ---
+Enter ID: 403
+Enter Score: 55
+
+--- STUDENT SCORE REPORT ---
+ID     | Score
+-------|-------
+401    | 50
+402    | 45
+403    | 55
+
+TOP PERFORMER ID: 403
+----------------------------------------------------------------
