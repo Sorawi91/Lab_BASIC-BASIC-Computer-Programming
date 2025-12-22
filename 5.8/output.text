@@ -1,0 +1,49 @@
+--------------------------------------------
+Enter Student ID: 111
+Enter Math Score (out of 100): 90
+Enter Science Score (out of 100): 85
+Enter English Score (out of 100): 95
+270
+--- STUDENT ACADEMIC REPORT ---
+Student ID: 111
+Math Score: 90, Science Score: 85, English Score: 95
+Total Score: 270
+Average Score: 90.00
+Grade A
+--------------------------------------------
+Enter Student ID: 222
+Enter Math Score (out of 100): 75
+Enter Science Score (out of 100): 70
+Enter English Score (out of 100): 60
+205
+--- STUDENT ACADEMIC REPORT ---
+Student ID: 222
+Math Score: 75, Science Score: 70, English Score: 60
+Total Score: 205
+Average Score: 68.00
+Grade B
+--------------------------------------------
+Enter Student ID: 333
+Enter Math Score (out of 100): 50
+Enter Science Score (out of 100): 40
+Enter English Score (out of 100): 50
+140
+--- STUDENT ACADEMIC REPORT ---
+Student ID: 333
+Math Score: 50, Science Score: 40, English Score: 50
+Total Score: 140
+Average Score: 46.00
+Grade C
+--------------------------------------------
+Enter Student ID: 444
+Enter Math Score (out of 100): 60
+Enter Science Score (out of 100): 70
+Enter English Score (out of 100): 70
+200
+--- STUDENT ACADEMIC REPORT ---
+Student ID: 444
+Math Score: 60, Science Score: 70, English Score: 70
+Total Score: 200
+Average Score: 66.00
+Grade B
+--------------------------------------------
