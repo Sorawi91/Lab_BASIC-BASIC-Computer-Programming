@@ -1,0 +1,49 @@
+------------------------------------------------
+Enter Item ID: 001
+Enter Cost Price per unit: 100.00
+Enter Sell Price per unit: 150.00
+Enter Stock Quantity: 50
+
+--- INVENTORY PROFIT REPORT ---
+Item ID: 1
+Cost Price: 100.00, Sell Price: 150.00, Stock: 50
+Total Profit: 2500.00
+Profit Percentage: 50.00%
+Status: Profit!
+------------------------------------------------
+Enter Item ID: 002
+Enter Cost Price per unit: 200.00
+Enter Sell Price per unit: 180.00
+Enter Stock Quantity: 10
+
+--- INVENTORY PROFIT REPORT ---
+Item ID: 2
+Cost Price: 200.00, Sell Price: 180.00, Stock: 10
+Total Profit: -200.00
+Profit Percentage: -20.00%
+Status: Loss!
+------------------------------------------------
+Enter Item ID: 003
+Enter Cost Price per unit: 50.00
+Enter Sell Price per unit: 50.00
+Enter Stock Quantity: 100
+
+--- INVENTORY PROFIT REPORT ---
+Item ID: 3
+Cost Price: 50.00, Sell Price: 50.00, Stock: 100
+Total Profit: 0.00
+Profit Percentage: 0.00%
+Status: Break Even.
+------------------------------------------------
+Enter Item ID: 004
+Enter Cost Price per unit: 1000.00
+Enter Sell Price per unit: 1250.00
+Enter Stock Quantity: 5
+
+--- INVENTORY PROFIT REPORT ---
+Item ID: 4
+Cost Price: 1000.00, Sell Price: 1250.00, Stock: 5
+Total Profit: 1250.00
+Profit Percentage: 250.00%
+Status: Profit!
+------------------------------------------------
