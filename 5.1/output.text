@@ -1,0 +1,33 @@
+-----------------------------------------------------------
+Enter rectangle length (integer): 10
+Enter rectangle width (integer): 5
+
+--- RECTANGLE AREA REPORT ---
+Length: 10
+Width: 5
+Calculated Area: 50
+-----------------------------------------------------------
+Enter rectangle length (integer): 8
+Enter rectangle width (integer): 8
+
+--- RECTANGLE AREA REPORT ---
+Length: 8
+Width: 8
+Calculated Area: 64
+-----------------------------------------------------------
+Enter rectangle length (integer): 20
+Enter rectangle width (integer): 3
+
+--- RECTANGLE AREA REPORT ---
+Length: 20
+Width: 3
+Calculated Area: 60
+-----------------------------------------------------------
+Enter rectangle length (integer): 2
+Enter rectangle width (integer): 1
+
+--- RECTANGLE AREA REPORT ---
+Length: 2
+Width: 1
+Calculated Area: 2
+-----------------------------------------------------------
