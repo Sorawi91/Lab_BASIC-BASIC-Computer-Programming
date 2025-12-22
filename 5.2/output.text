@@ -1,0 +1,46 @@
+-------------------------------------------
+Enter Employee ID: 1001
+Enter Gross Salary: 40000
+Enter Bonus: 5000
+
+--- EMPLOYEE SALARY REPORT ---
+ID: 1001
+Gross Salary: 40000
+Bonus: 5000
+Total Income: 45000
+Net Salary: 40500
+-------------------------------------------
+Enter Employee ID: 1002
+Enter Gross Salary: 25000
+Enter Bonus: 1000
+
+--- EMPLOYEE SALARY REPORT ---
+ID: 1002
+Gross Salary: 25000
+Bonus: 1000
+Total Income: 26000
+Net Salary: 24700
+-------------------------------------------
+Enter Employee ID: 1003
+Enter Gross Salary: 28000
+Enter Bonus: 2000
+
+--- EMPLOYEE SALARY REPORT ---
+ID: 1003
+Gross Salary: 28000
+Bonus: 2000
+Total Income: 30000
+Net Salary: 28500
+-------------------------------------------
+Enter Employee ID: 1004
+Enter Gross Salary: 30000
+Enter Bonus: 1
+
+--- EMPLOYEE SALARY REPORT ---
+ID: 1004
+Gross Salary: 30000
+Bonus: 1
+Total Income: 30001
+Net Salary: 27001
+-------------------------------------------
+
