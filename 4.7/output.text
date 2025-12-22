@@ -1,0 +1,63 @@
+-----------------------------------
+Enter the number of elements (N, max 10): 7
+Enter 7 integer numbers:
+Element 1: 10
+Element 2: 20
+Element 3: 15
+Element 4: 10
+Element 5: 30
+Element 6: 10
+Element 7: 25
+Enter the Search Value: 10
+
+--- FREQUENCY ANALYSIS REPORT ---
+Total elements recorded (N): 7
+Recorded Numbers: 10 20 15 10 30 10 25
+Search Value: 10
+Frequency Count: 3
+-----------------------------------
+Enter the number of elements (N, max 10): 5
+Enter 5 integer numbers:
+Element 1: 1
+Element 2: 2
+Element 3: 3
+Element 4: 4
+Element 5: 5
+Enter the Search Value: 10
+
+--- FREQUENCY ANALYSIS REPORT ---
+Total elements recorded (N): 5
+Recorded Numbers: 1 2 3 4 5
+Search Value: 10
+Frequency Count: 0
+-----------------------------------
+Enter the number of elements (N, max 10): 6
+Enter 6 integer numbers:
+Element 1: 100
+Element 2: 50
+Element 3: 20
+Element 4: 50
+Element 5: 100
+Element 6: 50
+Enter the Search Value: 20
+
+--- FREQUENCY ANALYSIS REPORT ---
+Total elements recorded (N): 6
+Recorded Numbers: 100 50 20 50 100 50
+Search Value: 20
+Frequency Count: 1
+-----------------------------------
+Enter the number of elements (N, max 10): 4
+Enter 4 integer numbers:
+Element 1: 99
+Element 2: 99
+Element 3: 99
+Element 4: 99
+Enter the Search Value: 99
+
+--- FREQUENCY ANALYSIS REPORT ---
+Total elements recorded (N): 4
+Recorded Numbers: 99 99 99 99
+Search Value: 99
+Frequency Count: 4
+-----------------------------------

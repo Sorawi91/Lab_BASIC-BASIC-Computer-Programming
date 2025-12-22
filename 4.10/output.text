@@ -1,0 +1,73 @@
+------------------------------------------
+Enter 9 integer numbers for the 3x3 array:
+Enter element for Row 0, Col 0: 1
+Enter element for Row 0, Col 1: 2
+Enter element for Row 0, Col 2: 3
+Enter element for Row 1, Col 0: 4
+Enter element for Row 1, Col 1: 5
+Enter element for Row 1, Col 2: 6
+Enter element for Row 2, Col 0: 7
+Enter element for Row 2, Col 1: 8
+Enter element for Row 2, Col 2: 9
+
+--- TWO-DIMENSIONAL ARRAY REPORT ---
+Array Size: 3 Rows x 3 Columns
+Content (Table Format):
+1 2 3
+4 5 6
+7 8 9
+------------------------------------------
+Enter 9 integer numbers for the 3x3 array:
+Enter element for Row 0, Col 0: 10
+Enter element for Row 0, Col 1: 20
+Enter element for Row 0, Col 2: 30
+Enter element for Row 1, Col 0: 1
+Enter element for Row 1, Col 1: 2
+Enter element for Row 1, Col 2: 3
+Enter element for Row 2, Col 0: 5
+Enter element for Row 2, Col 1: 15
+Enter element for Row 2, Col 2: 25
+
+--- TWO-DIMENSIONAL ARRAY REPORT ---
+Array Size: 3 Rows x 3 Columns
+Content (Table Format):
+10 20 30
+1 2 3
+5 15 25
+------------------------------------------
+Enter 9 integer numbers for the 3x3 array:
+Enter element for Row 0, Col 0: 50
+Enter element for Row 0, Col 1: 0
+Enter element for Row 0, Col 2: 100
+Enter element for Row 1, Col 0: 1 
+Enter element for Row 1, Col 1: 0
+Enter element for Row 1, Col 2: 2
+Enter element for Row 2, Col 0: 3
+Enter element for Row 2, Col 1: 0
+Enter element for Row 2, Col 2: 4
+
+--- TWO-DIMENSIONAL ARRAY REPORT ---
+Array Size: 3 Rows x 3 Columns
+Content (Table Format):
+50 0 100
+1 0 2
+3 0 4
+------------------------------------------
+Enter 9 integer numbers for the 3x3 array:
+Enter element for Row 0, Col 0: 11
+Enter element for Row 0, Col 1: 22
+Enter element for Row 0, Col 2: 11
+Enter element for Row 1, Col 0: 33
+Enter element for Row 1, Col 1: 44
+Enter element for Row 1, Col 2: 33
+Enter element for Row 2, Col 0: 11
+Enter element for Row 2, Col 1: 22
+Enter element for Row 2, Col 2: 11
+
+--- TWO-DIMENSIONAL ARRAY REPORT ---
+Array Size: 3 Rows x 3 Columns
+Content (Table Format):
+11 22 11
+33 44 33
+11 22 11
+------------------------------------------

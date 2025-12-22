@@ -1,0 +1,43 @@
+-------------------------------
+Enter score for student 1: 70
+Enter score for student 2: 80
+Enter score for student 3: 50
+Enter score for student 4: 90
+Enter score for student 5: 60
+
+--- STUDENT SCORE ANALYSIS REPORT ---
+Recorded Scores: 70 80 50 90 60
+Total Sum: 350
+Average Score: 70.00
+Number of Scores Above Average: 2
+-------------------------------
+--- STUDENT SCORE ANALYSIS REPORT ---
+Recorded Scores: 50 50 50 50 50
+Total Sum: 250
+Average Score: 50.00
+Number of Scores Above Average: 0
+-------------------------------
+Enter score for student 1: 60
+Enter score for student 2: 75
+Enter score for student 3: 80
+Enter score for student 4: 65
+Enter score for student 5: 70
+
+--- STUDENT SCORE ANALYSIS REPORT ---
+Recorded Scores: 60 75 80 65 70
+Total Sum: 350
+Average Score: 70.00
+Number of Scores Above Average: 2
+-------------------------------
+Enter score for student 1: 10
+Enter score for student 2: 20
+Enter score for student 3: 30
+Enter score for student 4: 40
+Enter score for student 5: 100
+
+--- STUDENT SCORE ANALYSIS REPORT ---
+Recorded Scores: 10 20 30 40 100
+Total Sum: 200
+Average Score: 40.00
+Number of Scores Above Average: 1
+-------------------------------

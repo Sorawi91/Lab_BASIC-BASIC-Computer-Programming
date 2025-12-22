@@ -1,0 +1,33 @@
+--------------------------------------
+Enter Gross Salary (THB/month, integer): 18000 
+
+--- SALARY CALCULATION REPORT ---
+Gross Salary: 18000 THB
+Tax Rate Applied: 0%
+Tax Amount Deducted: 0.00 THB
+Net Salary: 18000.00 THB
+--------------------------------------
+Enter Gross Salary (THB/month, integer): 35000
+
+--- SALARY CALCULATION REPORT ---
+Gross Salary: 35000 THB
+Tax Rate Applied: 5%
+Tax Amount Deducted: 1750.00 THB
+Net Salary: 33250.00 THB
+--------------------------------------
+Enter Gross Salary (THB/month, integer): 65000
+
+--- SALARY CALCULATION REPORT ---
+Gross Salary: 65000 THB
+Tax Rate Applied: 10%
+Tax Amount Deducted: 6500.00 THB
+Net Salary: 58500.00 THB
+--------------------------------------
+Enter Gross Salary (THB/month, integer): 20000
+
+--- SALARY CALCULATION REPORT ---
+Gross Salary: 20000 THB
+Tax Rate Applied: 5%
+Tax Amount Deducted: 1000.00 THB
+Net Salary: 19000.00 THB
+--------------------------------------
