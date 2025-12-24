@@ -1,0 +1,26 @@
+------------------------------------------------------------
+Enter initial integer value: 50
+
+--- POINTER MODIFICATION REPORT ---
+1. Value BEFORE function call: 50
+2. Value AFTER function call: 60
+
+------------------------------------------------------------
+Enter initial integer value: 0
+
+--- POINTER MODIFICATION REPORT ---
+1. Value BEFORE function call: 0
+2. Value AFTER function call: 10
+------------------------------------------------------------
+Enter initial integer value: 7
+
+--- POINTER MODIFICATION REPORT ---
+1. Value BEFORE function call: 7
+2. Value AFTER function call: 17
+------------------------------------------------------------
+Enter initial integer value: 1000
+
+--- POINTER MODIFICATION REPORT ---
+1. Value BEFORE function call: 1000
+2. Value AFTER function call: 1010
+------------------------------------------------------------
