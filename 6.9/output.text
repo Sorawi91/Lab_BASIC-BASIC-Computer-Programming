@@ -1,0 +1,71 @@
+------------------------------------------------------------
+Enter 3 months of REVENUE values:
+Month 1 REVENUE: 1000
+Month 2 REVENUE: 1000
+Month 3 REVENUE: 1000
+
+Enter 3 months of EXPENSE values:
+Month 1 EXPENSE: 500
+Month 2 EXPENSE: 500
+Month 3 EXPENSE: 500
+
+--- 3 MONTH FINANCIAL ANALYSIS REPORT ---
+TOTAL REVENUE: 3000
+TOTAL EXPENSE: 1500
+
+NET PROFIT: 1500
+BUSINESS STATUS: PROJECT IS PROFITABLE
+------------------------------------------------------------
+Enter 3 months of REVENUE values:
+Month 1 REVENUE: 100
+Month 2 REVENUE: 100
+Month 3 REVENUE: 100
+
+Enter 3 months of EXPENSE values:
+Month 1 EXPENSE: 200
+Month 2 EXPENSE: 200
+Month 3 EXPENSE: 200
+
+--- 3 MONTH FINANCIAL ANALYSIS REPORT ---
+TOTAL REVENUE: 300
+TOTAL EXPENSE: 600
+
+NET PROFIT: -300
+BUSINESS STATUS: PROJECT IS UNPROFITABLE
+------------------------------------------------------------
+Enter 3 months of REVENUE values:
+Month 1 REVENUE: 500
+Month 2 REVENUE: 500
+Month 3 REVENUE: 500
+
+Enter 3 months of EXPENSE values:
+Month 1 EXPENSE: 500
+Month 2 EXPENSE: 500
+Month 3 EXPENSE: 500
+
+--- 3 MONTH FINANCIAL ANALYSIS REPORT ---
+TOTAL REVENUE: 1500
+TOTAL EXPENSE: 1500
+
+NET PROFIT: 0
+BUSINESS STATUS: PROJECT IS PROFITABLEEnter 3 months of REVENUE values:
+Month 1 REVENUE: 500
+Month 2 REVENUE: 500
+Month 3 REVENUE: 500
+
+Enter 3 months of EXPENSE values:
+Month 1 EXPENSE: 500
+Month 2 EXPENSE: 500
+Month 3 EXPENSE: 500
+
+--- 3 MONTH FINANCIAL ANALYSIS REPORT ---
+TOTAL REVENUE: 1500
+TOTAL EXPENSE: 1500
+
+NET PROFIT: 0
+BUSINESS STATUS: PROJECT IS PROFITABLE
+------------------------------------------------------------
+
+------------------------------------------------------------
+
+------------------------------------------------------------
