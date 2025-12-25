@@ -1,0 +1,49 @@
+------------------------------------------------
+Enter 3 integer elements for the array:
+Element 0: 11
+Element 1: 22
+Element 2: 33
+
+--- ARRAY AND POINTER REPORT ---
+Index | Value (Direct) | Value (via Pointer) | Address
+--------------------------------------------------
+    0 |             11 |                  11 | 00000000005FFE64
+    1 |             22 |                  22 | 00000000005FFE68
+    2 |             33 |                  33 | 00000000005FFE6C
+------------------------------------------------
+Enter 3 integer elements for the array:
+Element 0: 100
+Element 1: 200
+Element 2: 300
+
+--- ARRAY AND POINTER REPORT ---
+Index | Value (Direct) | Value (via Pointer) | Address
+--------------------------------------------------
+    0 |            100 |                 100 | 00000000005FFE64
+    1 |            200 |                 200 | 00000000005FFE68
+    2 |            300 |                 300 | 00000000005FFE6C
+------------------------------------------------
+Enter 3 integer elements for the array:
+Element 0: 0
+Element 1: 1
+Element 2: 0
+
+--- ARRAY AND POINTER REPORT ---
+Index | Value (Direct) | Value (via Pointer) | Address
+--------------------------------------------------
+    0 |              0 |                   0 | 00000000005FFE64
+    1 |              1 |                   1 | 00000000005FFE68
+    2 |              0 |                   0 | 00000000005FFE6C
+------------------------------------------------
+Enter 3 integer elements for the array:
+Element 0: -5
+Element 1: 10
+Element 2: -15
+
+--- ARRAY AND POINTER REPORT ---
+Index | Value (Direct) | Value (via Pointer) | Address
+--------------------------------------------------
+    0 |             -5 |                  -5 | 00000000005FFE64
+    1 |             10 |                  10 | 00000000005FFE68
+    2 |            -15 |                 -15 | 00000000005FFE6C
+------------------------------------------------
