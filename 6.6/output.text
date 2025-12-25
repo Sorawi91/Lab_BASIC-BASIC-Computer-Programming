@@ -1,0 +1,49 @@
+-------------------------------------------
+Enter 5 transactions (Income +, Expense -):
+Transaction 1: 1000
+Transaction 2: -200
+Transaction 3: 500
+Transaction 4: -100
+Transaction 5: -50
+
+--- PERSONAL FINANCE REPORT ---
+Transactions Recorded: 1000 -200 500 -100 -50
+Net Balance: 1150
+Status: PROFIT
+-------------------------------------------
+Enter 5 transactions (Income +, Expense -):
+Transaction 1: 100
+Transaction 2: -500
+Transaction 3: -100
+Transaction 4: 50
+Transaction 5: -20
+
+--- PERSONAL FINANCE REPORT ---
+Transactions Recorded: 100 -500 -100 50 -20
+Net Balance: -470
+Status: LOSS
+-------------------------------------------
+Enter 5 transactions (Income +, Expense -):
+Transaction 1: 500
+Transaction 2: 500
+Transaction 3: -500
+Transaction 4: -500
+Transaction 5: 0
+
+--- PERSONAL FINANCE REPORT ---
+Transactions Recorded: 500 500 -500 -500 0
+Net Balance: 0
+Status: PROFIT
+-------------------------------------------
+Enter 5 transactions (Income +, Expense -):
+Transaction 1: -100
+Transaction 2: -200
+Transaction 3: -50
+Transaction 4: -50
+Transaction 5: 100
+
+--- PERSONAL FINANCE REPORT ---
+Transactions Recorded: -100 -200 -50 -50 100
+Net Balance: -300
+Status: LOSS
+-------------------------------------------
