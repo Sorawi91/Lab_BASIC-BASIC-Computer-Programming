@@ -1,0 +1,36 @@
+-----------------------------------------------------
+Enter first integer (Val A): 10
+Enter second integer (Val B): 5
+
+--- CALCULATION REPORT ---
+Input Values: A = 10, B = 5
+----------------------------------
+Result Sum (A + B): 15
+Result Product (A * B): 50
+-----------------------------------------------------
+Enter first integer (Val A): 100
+Enter second integer (Val B): 20
+
+--- CALCULATION REPORT ---
+Input Values: A = 100, B = 20
+----------------------------------
+Result Sum (A + B): 120
+Result Product (A * B): 2000
+-----------------------------------------------------
+Enter first integer (Val A): 0
+Enter second integer (Val B): 42
+
+--- CALCULATION REPORT ---
+Input Values: A = 0, B = 42
+----------------------------------
+Result Sum (A + B): 42
+Result Product (A * B): 0
+-----------------------------------------------------
+Enter first integer (Val A): -5
+Enter second integer (Val B): 10
+
+--- CALCULATION REPORT ---
+Input Values: A = -5, B = 10
+----------------------------------
+Result Sum (A + B): 5
+-----------------------------------------------------
