@@ -1,0 +1,7 @@
+--- FILE READING PROCESS ---
+Reading data from input_data.csv...
+File reading complete.
+
+--- DATA ANALYSIS REPORT ---
+Data read: 10, 20, 30, 40, 50
+Total Sum: 150
