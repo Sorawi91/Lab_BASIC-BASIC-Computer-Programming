@@ -1,0 +1,165 @@
+-------------------------------------------------------------------
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 1
+Enter Student ID: 1001
+Enter Score (0-100): 95
+Data updated. Grade calculated.
+
+--- STUDENT REPORT ---
+ID: 1001
+Score: 95
+Grade: A
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+
+--- STUDENT REPORT ---
+ID: 1001
+Score: 95
+Grade: A
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 1
+Enter Student ID: 1001
+Enter Score (0-100): 72
+Data updated. Grade calculated.
+
+--- STUDENT REPORT ---
+ID: 1001
+Score: 72
+Grade: B
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+
+--- STUDENT REPORT ---
+ID: 1001
+Score: 72
+Grade: B
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 3
+Exiting program. Goodbye!
+-------------------------------------------------------------------
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 1
+Enter Student ID: 2002
+Enter Score (0-100): 50
+Data updated. Grade calculated.
+
+--- STUDENT REPORT ---
+ID: 2002
+Score: 50
+Grade: D
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+
+--- STUDENT REPORT ---
+ID: 2002
+Score: 50
+Grade: D
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 1
+Enter Student ID: 2002
+Enter Score (0-100): 49
+Data updated. Grade calculated.
+
+--- STUDENT REPORT ---
+ID: 2002
+Score: 49
+Grade: F
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+
+--- STUDENT REPORT ---
+ID: 2002
+Score: 49
+Grade: F
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 3
+Exiting program. Goodbye!
+-------------------------------------------------------------------
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 4
+Invalid choice. Please try again.
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+No student data has been entered yet (ID is 0).
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 1
+Enter Student ID: 3003
+Enter Score (0-100): 65
+Data updated. Grade calculated.
+
+--- STUDENT REPORT ---
+ID: 3003
+Score: 65
+Grade: C
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 2
+
+--- STUDENT REPORT ---
+ID: 3003
+Score: 65
+Grade: C
+
+--- STUDENT RECORD MENU ---
+1. Input/Update Student Data
+2. View Student Report
+3. Exit Program
+Enter choice: 3
+Exiting program. Goodbye!
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
+
+-------------------------------------------------------------------
