@@ -8,10 +8,10 @@ struct Employee {
 };
 
 
-int calculate_net_salary(int *total_income , int *net);
+void calculate_net_salary(int *total_income , int *net);
 
 int main() {
-    //รับค่ากำหนดตัวเเปล
+
     struct Employee emp;
     int net_salary;
     
@@ -24,12 +24,9 @@ int main() {
     printf("Enter Bonus: ");
     scanf("%d", &emp.bonus);
 
-    //ทำการคำนวน logic
     emp.total_income = emp.gross_salary + emp.bonus;
 
     calculate_net_salary(&emp.total_income,&net_salary);
-
-    //เเสดงผล
     printf("\n--- EMPLOYEE SALARY REPORT ---\n");
     printf("ID: %d\n", emp.id);
     printf("Gross Salary: %d\n", emp.gross_salary);
@@ -41,7 +38,7 @@ int main() {
 }
 
 
-int calculate_net_salary(int *total_income , int *net){
+void calculate_net_salary(int *total_income , int *net){
     double tax_amount;
     if (*total_income > 30000) {
         tax_amount = *total_income * 0.10;
@@ -49,5 +46,4 @@ int calculate_net_salary(int *total_income , int *net){
         tax_amount = *total_income * 0.05;
     }
     *net = *total_income - (int)tax_amount;
-    
 }
