@@ -1,0 +1,25 @@
+-------------------------------------------------------------
+Enter a sentence: progarmming is fun
+
+--- STRING ANALYSIS REPORT ---
+Input String: "progarmming is fun"
+Total Vowel Count: 5
+-------------------------------------------------------------
+Enter a sentence: Hello World!
+
+--- STRING ANALYSIS REPORT ---
+Input String: "Hello World!"
+Total Vowel Count: 3
+-------------------------------------------------------------
+Enter a sentence: rhythm
+
+--- STRING ANALYSIS REPORT ---
+Input String: "rhythm"
+Total Vowel Count: 0
+-------------------------------------------------------------
+Enter a sentence: AEIOUaeiou
+
+--- STRING ANALYSIS REPORT ---
+Input String: "AEIOUaeiou"
+Total Vowel Count: 10
+-------------------------------------------------------------
