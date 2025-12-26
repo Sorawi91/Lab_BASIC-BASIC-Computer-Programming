@@ -1,59 +1,35 @@
 #include <stdio.h>
 
-int main()
-{
-    char text[101], c, d, z, x;
-    int countUpper = 0;
-    int countLower = 0;
-    int countDigit = 0;
-    int countOther = 0;
-    int i;
+// Helper functions
+int isUpper(char c) { return (c >= 'A' && c <= 'Z'); }
+int isLower(char c) { return (c >= 'a' && c <= 'z'); }
+int isDigit(char c) { return (c >= '0' && c <= '9'); }
 
-    if (scanf("%s", text) != 1)
-    {
+int main() {
+    char text[101];
+    char *p;
+
+    int upper = 0, lower = 0, digit = 0, other = 0;
+
+    if (scanf("%100s", text) != 1)
         return 1;
+
+    // Use pointer to traverse string
+    for (p = text; *p != '\0'; p++) {
+        if (isUpper(*p))
+            upper++;
+        else if (isLower(*p))
+            lower++;
+        else if (isDigit(*p))
+            digit++;
+        else
+            other++;
     }
 
-    for (i = 0; text[i] != '\0'; i++)
-    {
+    printf("Uppercase: %d\n", upper);
+    printf("Lowercase: %d\n", lower);
+    printf("Digits: %d\n", digit);
+    printf("Special/other: %d\n", other);
 
-        int other = 0;
-        for (c = 'A'; c <= 'Z'; c++)
-        {
-            if (text[i] == c)
-            {
-                countUpper += 1;
-                other++;
-                break;
-            }
-        }
-        for (d = 'a'; d <= 'z'; d++)
-        {
-            if (text[i] == d)
-            {
-                countLower += 1;
-                other++;
-                break;
-            }
-        }
-        for (x = '0'; x <= '9'; x++)
-        {
-            if (text[i] == x)
-            {
-                countDigit += 1;
-                other++;
-                break;
-            }
-        }
-        if (other == 0)
-        {
-            countOther += 1;
-        }
-    }
-
-    printf("Uppercase: %d\n", countUpper);
-    printf("Lowercase: %d\n", countLower);
-    printf("Digits: %d\n", countDigit);
-    printf("Special/Other: %d\n", countOther);
     return 0;
 }
