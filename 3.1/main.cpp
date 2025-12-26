@@ -2,22 +2,25 @@
 
 struct Product
 {
-    char name[50];
-    int productId;
-    float price;
+    char name[50];  // เก็บชื่อสินค้า
+    int productId;  // เก็บรหัสสินค้า
+    float price;    // เก็บราคา
 };
 
 int main()
 {
-//สร้างชื่อ struct item
+    // 1. ประกาศตัวแปร item ชนิด struct Product
     struct Product item;
-    //รับค่าจากผู้ใช้เเละเพิ่มเข้าไปที่ struct 
-    if (scanf("%d %f %s", &item.productId, &item.price, &item.name) != 3)
+
+    // 2. รับค่า 3 ตัว (รหัส, ราคา, ชื่อ) ใส่ลงใน struct
+    // หมายเหตุ: item.name เป็น Array อยู่แล้ว ไม่ต้องใส่ & นำหน้า
+    if (scanf("%d %f %s", &item.productId, &item.price, item.name) != 3)
     {
-        return 1;
+        return 1; // ถ้ารับค่าไม่ครบ 3 ตัว ให้จบโปรแกรม
     }
-    //ปริ้นค่าที่อย่ใน struct
-    printf("ID: %d,Price: %.2f, Name: %s", item.productId, item.price, item.name);
+
+    // 3. ดึงค่าจาก struct มาแสดงผล
+    printf("ID: %d, Price: %.2f, Name: %s", item.productId, item.price, item.name);
 
     return 0;
 }
