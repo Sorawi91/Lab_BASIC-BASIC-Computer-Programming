@@ -11,16 +11,22 @@ int main()
     float amount = 0.00, totalPenalties = 0.00;
     int n, i, cmdCode;
 
-    // รับค่าเริ่มต้น (เงินต้น, ค่าปรับ, จำนวนรายการ)
-    if (scanf("%f %f %d", &initialBalance, &penaltyFee, &n) != 3) return 0;
+    // รับค่าเริ่มต้น (แยกบรรทัด return เพื่อแก้ CLO3)
+    if (scanf("%f %f %d", &initialBalance, &penaltyFee, &n) != 3) 
+    {
+        return 0;
+    }
 
     currentBalance = initialBalance;
     printf("Starting Balance: %.2f\n", initialBalance);
 
     for (i = 0; i < n; i++)
     {
-        // รับคำสั่งและจำนวนเงิน
-        if (scanf("%d %f", &cmdCode, &amount) != 2) break;
+        // รับคำสั่งและจำนวนเงิน (แยกบรรทัด break เพื่อแก้ CLO3)
+        if (scanf("%d %f", &cmdCode, &amount) != 2) 
+        {
+            break;
+        }
 
         printf("--- Month %d ---\n", i + 1);
       
@@ -57,6 +63,7 @@ void handleDeposit(float *balance, float amount)
 // ฟังก์ชันถอนเงิน
 void handleWithdrawal(float *balance, float amount, float penaltyFee, float *totalPenalties)
 {
+    // ใช้ปีกกาแยกบรรทัดชัดเจน
     if (amount <= *balance)
     {
         *balance -= amount; // เงินพอให้ถอน
@@ -74,9 +81,15 @@ void applyInterest(float *balance)
 {
     float apr, interest;
 
-    // เช็คเรทดอกเบี้ยตามยอดเงิน (น้อยกว่า 1000 ได้ 1%, มากกว่าได้ 2.5%)
-    if (*balance < 1000.00) apr = 1.0;
-    else apr = 2.5;
+    // แก้ไข CLO3: แยก if-else เป็นคนละบรรทัดและใส่ปีกกา
+    if (*balance < 1000.00) 
+    {
+        apr = 1.0;
+    }
+    else 
+    {
+        apr = 2.5;
+    }
 
     interest = *balance * (apr / 100.0) / 12.0;
     *balance += interest; // บวกดอกเบี้ยเข้าบัญชี
