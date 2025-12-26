@@ -9,7 +9,6 @@ int main()
     float PENALTY_FEE, totalPenalties = 0.0;
     int n, cmdCode, quantity;
 
-    // รับค่าเริ่มต้น (แยกบรรทัด return เพื่อแก้ CLO3)
     if (scanf("%d %f %d", &Stock, &PENALTY_FEE, &n) != 3) 
     {
         return 0;
@@ -71,3 +70,4 @@ void Cases(int *Stocks, float *Fee, int *number, int *cmd, int *quantitys, float
         }
     }
 }
+
