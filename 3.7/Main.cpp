@@ -1,54 +1,45 @@
 #include <stdio.h>
 
-struct SalesRecord
-{
+// Define structure
+struct SalesRecord {
     char name[50];
     float target;
     float actual;
 };
 
-int main()
-{
-    int N, i;
-    float grandTotalCommission = 0.0;
+// Function to calculate commission for one salesperson
+float calculateCommission(float target, float actual) {
+    float commission = actual * 0.10;
+
+    if (actual >= target * 1.20) {
+        commission += 200.0;
+    } else if (actual >= target) {
+        commission += 50.0;
+    } else if (actual < target * 0.90) {
+        commission -= 100.0;
+    }
+
+    return commission;
+}
+
+int main() {
+    int N;
+    float grandTotal = 0.0;
+    struct SalesRecord record;
 
     if (scanf("%d", &N) != 1)
-    {
         return 1;
-    }
 
-    struct SalesRecord records[N];
-
-    for (i = 0; i < N; i++)
-    {
-        float baseCommission;
-
-        if (scanf("%f %f %s", &records[i].target, &records[i].actual, records[i].name) != 3)
-        {
+    for (int i = 0; i < N; i++) {
+        if (scanf("%f %f %s",
+                  &record.target,
+                  &record.actual,
+                  record.name) != 3)
             return 1;
-        }
 
-        baseCommission = records[i].actual * 0.10;
-
-        if (records[i].actual >= records[i].target * 1.20)
-        {
-            baseCommission += 200.0;
-        }
-        else if (records[i].actual >= records[i].target)
-        {
-
-            baseCommission += 50.0;
-        }
-        else if (records[i].actual < records[i].target * 0.90)
-        {
-
-            baseCommission -= 100.0;
-        }
-
-        grandTotalCommission += baseCommission;
+        grandTotal += calculateCommission(record.target, record.actual);
     }
 
-    printf("Grand Total Commission: %.2f\n", grandTotalCommission);
-
+    printf("Grand Total Commission: %.2f\n", grandTotal);
     return 0;
 }
