@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//สร้าง struct ไว้เก็บ Employee
 struct Employee {
     int id;
     int gross_salary;
@@ -7,10 +7,12 @@ struct Employee {
     int total_income;
 };
 
-
+//สร้างฟังชั่น
 int calculate_net_salary(int *total_income , int *net);
 
+
 int main() {
+    //กำหนดเเละสร้างตัวเเปร
     struct Employee emp;
     int net_salary;
 
@@ -24,11 +26,11 @@ int main() {
     printf("Enter Bonus: ");
     scanf("%d", &emp.bonus);
 
-    
+    //คำนวน
     emp.total_income = emp.gross_salary + emp.bonus;
 
     calculate_net_salary(&emp.total_income,&net_salary);
-    
+    //เเสดงผล
     printf("\n--- EMPLOYEE SALARY REPORT ---\n");
     printf("ID: %d\n", emp.id);
     printf("Gross Salary: %d\n", emp.gross_salary);
