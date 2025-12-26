@@ -24,12 +24,17 @@ int main() {
     printf("Content (Table Format):\n");
 
     // ลูปแสดงผลเป็นตาราง
-    for (i = 0; i < ROWS; i++) {        // Loop นอก: ควบคุมแถว (Row)
-        for (j = 0; j < COLS; j++) {    // Loop ใน: ควบคุมคอลัมน์ (Column)
-            printf("%d ", data[i][j]);  // ปริ้นตัวเลขตามด้วยช่องว่าง
+    for (i = 0; i < ROWS; i++) {        
+        // Loop นอก: ควบคุมแถว (Row)
+        for (j = 0; j < COLS; j++) {    
+            // Loop ใน: ควบคุมคอลัมน์ (Column)
+            printf("%d ", data[i][j]);  
+            // ปริ้นตัวเลขตามด้วยช่องว่าง
         }
-        printf("\n"); // เมื่อจบ Loop ใน (ครบ 1 แถว) ให้ขึ้นบรรทัดใหม่
+        printf("\n"); 
+        // เมื่อจบ Loop ใน (ครบ 1 แถว) ให้ขึ้นบรรทัดใหม่
     }
 
     return 0;
 }
+
