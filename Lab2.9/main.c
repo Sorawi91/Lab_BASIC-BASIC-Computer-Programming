@@ -1,5 +1,42 @@
 #include <stdio.h>
 
+/* ฟังก์ชันรับของเข้า */
+void receiveStock(int *stock, int quantity)
+{
+    *stock = *stock + quantity;
+    printf("Received %d units.\n", quantity);
+}
+
+/* ฟังก์ชันส่งของออก */
+void shipStock(int *stock, int quantity, float penaltyFee, float *totalPenalty)
+{
+    if (quantity <= 0)
+    {
+        printf("Error: Quantity must be positive.\n");
+    }
+    else if (quantity <= *stock)
+    {
+        *stock = *stock - quantity;
+        printf("Shipped %d units.\n", quantity);
+    }
+    else
+    {
+        /* เพิ่มค่าปรับเมื่อของในสต็อกไม่พอ */
+        *totalPenalty = *totalPenalty + penaltyFee;
+        printf(
+            "FAILURE: Insufficient stock. PENALTY %.2f added.\n",
+            penaltyFee
+        );
+    }
+}
+
+/* ฟังก์ชันรายงานผล */
+void reportStatus(int stock, float totalPenalty)
+{
+    printf("Current Stock: %d\n", stock);
+    printf("Total Penalties: %.2f\n", totalPenalty);
+}
+
 int main()
 {
     int stock;
@@ -24,43 +61,18 @@ int main()
             break;
         }
 
-        /* คำสั่งรับของเข้า */
         if (command == 1)
         {
-            stock = stock + quantity;
-            printf("Received %d units.\n", quantity);
+            receiveStock(&stock, quantity);
         }
-
-        /* คำสั่งส่งของออก */
         else if (command == 2)
         {
-            if (quantity <= 0)
-            {
-                printf("Error: Quantity must be positive.\n");
-            }
-            else if (quantity <= stock)
-            {
-                stock = stock - quantity;
-                printf("Shipped %d units.\n", quantity);
-            }
-            else
-            {
-                totalPenalty = totalPenalty + penaltyFee;
-                printf(
-                    "FAILURE: Insufficient stock. PENALTY %.2f added.\n",
-                    penaltyFee
-                );
-            }
+            shipStock(&stock, quantity, penaltyFee, &totalPenalty);
         }
-
-        /* คำสั่งรายงานผล */
         else if (command == 3)
         {
-            printf("Current Stock: %d\n", stock);
-            printf("Total Penalties: %.2f\n", totalPenalty);
+            reportStatus(stock, totalPenalty);
         }
-
-        /* คำสั่งไม่ถูกต้อง */
         else
         {
             printf("Error: Invalid command.\n");
