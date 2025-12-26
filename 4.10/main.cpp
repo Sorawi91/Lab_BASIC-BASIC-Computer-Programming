@@ -16,8 +16,7 @@ int main()
         for (j = 0; j < COLS; j++)
         {
             printf("Enter element for Row %d, Col %d: ", i, j);
-            
-            // แก้ไข CLO3: แยกบรรทัดและใส่ปีกกาให้ชัดเจน
+
             if (scanf("%d", &data[i][j]) != 1) 
             {
                 return 1;
@@ -41,3 +40,4 @@ int main()
     }
     return 0;
 }
+
