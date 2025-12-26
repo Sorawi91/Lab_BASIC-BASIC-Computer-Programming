@@ -1,86 +1,89 @@
 #include <stdio.h>
 
+// ประกาศ Prototype ฟังก์ชันไว้ก่อน เพื่อให้โครงสร้าง main ดูสะอาด
+void input_matrix(int rows, int cols, int matrix[rows][cols], char name);
+void transpose_matrix(int rows, int cols, int src[rows][cols], int dest[cols][rows]);
+void multiply_matrices(int rA, int cA, int cB, int A[rA][cA], int B[cA][cB], int C[rA][cB]);
 void print_matrix(int rows, int cols, int matrix[rows][cols]);
 
 int main()
 {
-    int A_ROWS = 2, A_COLS = 3;
-    int B_ROWS = 2, B_COLS = 3;
+    // กำหนดขนาด Matrix (ใช้ตัวแปรเพื่อลด Hardcode)
+    int R = 2, C = 3; 
 
-    int BT_ROWS = B_COLS;
-    int BT_COLS = B_ROWS;
-    int C_ROWS = A_ROWS;
-    int C_COLS = BT_COLS;
+    // ประกาศ Array สำหรับเก็บข้อมูล
+    int A[R][C];
+    int B[R][C];
+    int BT[C][R]; // Transpose แล้วขนาดจะสลับกัน (จาก 2x3 เป็น 3x2)
+    int Result[R][R]; // ผลลัพธ์จากการคูณ (2x3) * (3x2) จะได้ 2x2
 
-    int A[A_ROWS][A_COLS];
-    int B[B_ROWS][B_COLS];
-    int BT[BT_ROWS][BT_COLS];
-    int C[C_ROWS][C_COLS];
-    int i, j, k;
+    // 1. รับค่า Input (แยกฟังก์ชันเพื่อลดความซ้ำซ้อน)
+    input_matrix(R, C, A, 'A');
+    input_matrix(R, C, B, 'B');
 
-    printf("Enter elements for Matrix A (2x3):\n");
-    for (i = 0; i < A_ROWS; i++)
-    {
-        for (j = 0; j < A_COLS; j++)
-        {
-            printf("A[%d][%d]: ", i, j);
-            scanf("%d", &A[i][j]);
-        }
-    }
+    // 2. กลับด้าน Matrix B (Transpose)
+    // เหตุผล: การคูณ Matrix ต้องใช้ "แถวคูณหลัก" การกลับด้าน B ก่อนช่วยให้ Loop ง่ายขึ้น
+    transpose_matrix(R, C, B, BT);
 
-    printf("\nEnter elements for Matrix B (2x3):\n");
-    for (i = 0; i < B_ROWS; i++)
-    {
-        for (j = 0; j < B_COLS; j++)
-        {
-            printf("B[%d][%d]: ", i, j);
-            scanf("%d", &B[i][j]);
-        }
-    }
+    // 3. คำนวณการคูณ Matrix A x BT
+    multiply_matrices(R, C, R, A, BT, Result);
 
-    for (i = 0; i < B_ROWS; i++)
-    {
-        for (j = 0; j < B_COLS; j++)
-        {
-            BT[j][i] = B[i][j];
-        }
-    }
-
-    for (i = 0; i < A_ROWS; i++)
-    {
-        for (j = 0; j < BT_COLS; j++)
-        {
-            C[i][j] = 0;
-            for (k = 0; k < A_COLS; k++)
-            {
-                C[i][j] += A[i][k] * BT[k][j];
-            }
-        }
-    }
-
+    // 4. แสดงผลลัพธ์ (Report)
     printf("\n--- MATRIX MULTIPLICATION REPORT ---\n");
+    
+    printf("\nMatrix A (%dx%d):\n", R, C);
+    print_matrix(R, C, A);
 
-    printf("\nMatrix A (2x3):\n");
-    print_matrix(A_ROWS, A_COLS, A);
+    printf("\nMatrix B Transposed (%dx%d):\n", C, R);
+    print_matrix(C, R, BT);
 
-    printf("\nMatrix B (2x3):\n");
-    print_matrix(B_ROWS, B_COLS, B);
-
-    printf("\nMatrix B Transposed (BT, 3x2):\n");
-    print_matrix(BT_ROWS, BT_COLS, BT);
-
-    printf("\nResult Matrix C (A x BT, 2x2):\n");
-    print_matrix(C_ROWS, C_COLS, C);
+    printf("\nResult Matrix C (%dx%d):\n", R, R);
+    print_matrix(R, R, Result);
 
     return 0;
 }
 
-void print_matrix(int rows, int cols, int matrix[rows][cols])
-{
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < cols; j++)
-        {
+// --- Helper Functions ---
+
+// ฟังก์ชันรับค่า: ช่วยลด Code ที่ซ้ำกันใน main (CLO2)
+void input_matrix(int rows, int cols, int matrix[rows][cols], char name) {
+    printf("\nEnter elements for Matrix %c (%dx%d):\n", name, rows, cols);
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%c[%d][%d]: ", name, i, j);
+            // CLO4: เช็ค return ของ scanf เพื่อความเสถียร (กัน User ใส่ตัวอักษร)
+            if (scanf("%d", &matrix[i][j]) != 1) matrix[i][j] = 0; 
+        }
+    }
+}
+
+// ฟังก์ชัน Transpose: สลับแถวเป็นหลัก (Row <-> Column)
+void transpose_matrix(int rows, int cols, int src[rows][cols], int dest[cols][rows]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            dest[j][i] = src[i][j]; // สลับ index i และ j
+        }
+    }
+}
+
+// ฟังก์ชันคูณ Matrix: แยก Logic การคำนวณที่ซับซ้อนออกมา (CLO3)
+void multiply_matrices(int rA, int cA, int cB, int A[rA][cA], int B[cA][cB], int C[rA][cB]) {
+    for (int i = 0; i < rA; i++) {     // วนตามแถวของ A
+        for (int j = 0; j < cB; j++) { // วนตามหลักของ B
+            C[i][j] = 0;               // เริ่มต้นค่าผลลัพธ์เป็น 0
+            
+            // หาผลรวมผลคูณ (Dot Product)
+            for (int k = 0; k < cA; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+}
+
+// ฟังก์ชันแสดงผล
+void print_matrix(int rows, int cols, int matrix[rows][cols]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
             printf("%d ", matrix[i][j]);
         }
         printf("\n");
