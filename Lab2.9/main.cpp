@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-// ประกาศฟังก์ชัน (Prototype)
-void Cases(int *Stocks, float *Fee, int *number, int *cmd, int *quantitys, float *total);
+// ประกาศฟังก์ชัน: รับค่าเป็น Pointer ทั้งหมดเพื่อเข้าไปแก้ไขค่าใน Memory โดยตรง
+void Cases(int *Stocks, float *Fee, int *number, int *cmd, int *quantitys, float *totoal);
 
 int main()
 {
@@ -9,65 +9,57 @@ int main()
     float PENALTY_FEE, totalPenalties = 0.0;
     int n, cmdCode, quantity;
 
-    if (scanf("%d %f %d", &Stock, &PENALTY_FEE, &n) != 3) 
-    {
-        return 0;
-    }
+    // รับค่าเริ่มต้น: สต็อก, ค่าปรับ, จำนวนคำสั่ง
+    if (scanf("%d %f %d", &Stock, &PENALTY_FEE, &n) != 3) return 0;
     
-    // เรียกใช้ฟังก์ชัน Cases
+    // เรียกฟังก์ชันเดียวจบ ส่ง Address ของตัวแปรทุกตัวไปทำงาน
     Cases(&Stock, &PENALTY_FEE, &n, &cmdCode, &quantity, &totalPenalties);
     
     return 0;
 }
 
-void Cases(int *Stocks, float *Fee, int *number, int *cmd, int *quantitys, float *total){
+void Cases(int *Stocks, float *Fee, int *number, int *cmd, int *quantitys, float *totoal){
     
-    // วนลูปทำงานตามจำนวนคำสั่ง
+    // วนลูปทำตามจำนวนคำสั่งที่รับมา
     for (int i = 0; i < *number; i++)
     {
-        // รับรหัสคำสั่งและจำนวน (แยกบรรทัด break เพื่อแก้ CLO3)
-        if (scanf("%d %d", cmd, quantitys) != 2) 
-        {
-            break;
-        }
+        // รับรหัสคำสั่งและจำนวนของ (ใส่ลงใน Pointer เลย)
+        if (scanf("%d %d", cmd, quantitys) != 2) break;
 
         switch (*cmd)
         {
         case 1: 
-            // รับสินค้าเข้า
+        // รับของเข้า (Restock)
             *Stocks += *quantitys;
             printf("Received %d units.\n", *quantitys);
             break;
 
         case 2: 
-            // เบิกสินค้าออก
-            if (*quantitys <= 0) 
-            {
+        // ส่งของออก (Shipping)
+            if (*quantitys <= 0) {
                 printf("Error: Quantity must be positive.\n");
             } 
-            else if (*quantitys <= *Stocks) 
-            {
+            else if (*quantitys <= *Stocks) {
                 *Stocks -= *quantitys; 
+                // ของพอ -> ตัดสต็อก
                 printf("Shipped %d units.\n", *quantitys);
             } 
-            else 
-            {
-                *total += *Fee; 
-                printf("FAILURE: Insufficient stock. PENALTY %.2f added.\n", *Fee);
+            else {
+                *totoal += *Fee; 
+                // ของไม่พอ -> โดนปรับ
+                printf("FAILURE: Insufficent stock. PENALTY %.2f added.\n", *Fee);
             }
             break;
 
         case 3:
-            // ตรวจสอบสถานะ
+         // ดูรายงาน (Report)
             printf("Current Stock: %d\n", *Stocks);
-            printf("Total Penalties: %.2f\n", *total);
+            printf("Total Penalties: %.2f\n", *totoal);
             break;
 
-        default: 
-            // คำสั่งผิด
-            printf("Error: Invalid Command.\n");
+        default:
+            printf("Error invalid Command.\n");
             break;
         }
     }
 }
-
