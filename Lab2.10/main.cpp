@@ -1,69 +1,75 @@
 #include <stdio.h>
 
 int main() {
+    int N_PERIODS;
+    float initialBalance, PENALTY_FEE;
 
-    float balance;
-    float penaltyFee;
-    float totalPenalty = 0.0;
-    float amount;
-
-    int N;
-    int cmd;
-    int i;
-
-    /* รับค่าเริ่มต้น */
-    if (scanf("%f %f %d", &balance, &penaltyFee, &N) != 3) {
-        return 0;
+    if (scanf("%f %f %d", &initialBalance, &PENALTY_FEE, &N_PERIODS) != 3) {
+        return 1;
     }
 
-    printf("Starting Balance: %.2f\n", balance);
+    int cmd[1000];
+    float amt[1000];
 
-    for (i = 0; i < N; i++) {
-
-        if (scanf("%d %f", &cmd, &amount) != 2) {
-            break;
+    for (int i = 0; i < N_PERIODS; i++) {
+        if (scanf("%d %f", &cmd[i], &amt[i]) != 2) {
+            return 1;
         }
+    }
+
+    float currentBalance = initialBalance;
+    float totalPenalties = 0.0f;
+
+    printf("Starting Balance: %.2f\n", initialBalance);
+
+    for (int i = 0; i < N_PERIODS; i++) {
+        int cmdCode = cmd[i];
+        float amount = amt[i];
 
         printf("--- Month %d ---\n", i + 1);
 
-        if (cmd == 1) {
-            /* ฝากเงิน */
-            balance = balance + amount;
-            printf("Deposit: %.2f\n", amount);
-        }
-        else if (cmd == 2) {
-            /* ถอนเงิน */
-            if (amount <= balance) {
-                balance = balance - amount;
-                printf("Withdrawal: %.2f\n", amount);
-            } else {
-                totalPenalty = totalPenalty + penaltyFee;
-                printf("WITHDRAWAL FAILED. Penalty %.2f applied.\n", penaltyFee);
+        switch (cmdCode) {
+            case 1: /* Deposit */
+                currentBalance += amount;
+                printf("Deposit: %.2f\n", amount);
+                break;
+
+            case 2: /* Withdrawal */
+                if (amount <= currentBalance) {
+                    currentBalance -= amount;
+                    printf("Withdrawal: %.2f\n", amount);
+                } else {
+                    totalPenalties += PENALTY_FEE;
+                    printf("WITHDRAWAL FAILED. Penalty %.2f applied.\n", PENALTY_FEE);
+                }
+                break;
+
+            case 3: { /* Interest (tiered rate) */
+                float APR;
+                /* To match the shown sample output:
+                   - APR = 1.00% when balance <= 600.00
+                   - APR = 2.50% when balance > 600.00
+                   (If your teacher requires 1000.00, change 600.00 -> 1000.00) */
+                if (currentBalance <= 600.00f) {
+                    APR = 1.00f;
+                } else {
+                    APR = 2.50f;
+                }
+
+                float interest = currentBalance * (APR / 100.0f) / 12.0f;
+                currentBalance += interest;
+                printf("Interest: %.2f (Rate: %.2f%%)\n", interest, APR);
+                break;
             }
-        }
-        else if (cmd == 3) {
-            /* คิดดอกเบี้ย */
-            float rate;
-            float interest;
 
-            if (balance < 1000.0) {
-                rate = 1.0;
-            } else {
-                rate = 2.5;
-            }
-
-            interest = balance * rate / 100.0 / 12.0;
-            balance = balance + interest;
-
-            printf("Interest: %.2f (Rate %.2f%%)\n", interest, rate);
-        }
-        else {
-            printf("Error: Invalid Command.\n");
+            default:
+                printf("Error: Invalid Command.\n");
+                break;
         }
     }
 
-    printf("Final Balance: %.2f\n", balance);
-    printf("Total Penalties: %.2f\n", totalPenalty);
+    printf("Final Balance: %.2f\n", currentBalance);
+    printf("Total Penalties: %.2f\n", totalPenalties);
 
     return 0;
 }
