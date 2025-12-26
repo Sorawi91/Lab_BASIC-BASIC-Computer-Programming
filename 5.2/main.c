@@ -7,7 +7,6 @@ struct Employee {
     int total_income;
 };
 
-// แก้: เปลี่ยนจาก void เป็น int เพื่อ return ค่ากลับตามโจทย์
 int calculate_net_salary(int total_income);
 
 int main() {
@@ -39,7 +38,6 @@ int main() {
     return 0;
 }
 
-// ฟังก์ชันคำนวณและ Return ค่า (ตามโจทย์ข้อ 2)
 int calculate_net_salary(int total_income) {
     double tax_amount;
 
@@ -53,3 +51,4 @@ int calculate_net_salary(int total_income) {
     // ส่งคืนค่าสุทธิ (รายได้รวม - ภาษี)
     return total_income - (int)tax_amount;
 }
+
