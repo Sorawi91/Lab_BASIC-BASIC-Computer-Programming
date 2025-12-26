@@ -7,14 +7,14 @@ struct Employee {
     int total_income;
 };
 
-// Prototype: รับ pointer เพื่อคำนวณและส่งค่ากลับ
-void calculate_net_salary(int *total_income, int *net);
+// แก้: เปลี่ยนจาก void เป็น int เพื่อ return ค่ากลับตามโจทย์
+int calculate_net_salary(int total_income);
 
 int main() {
     struct Employee emp;
     int net_salary;
     
-    // 1. รับข้อมูล (เพิ่มการเช็ค scanf เพื่อความเสถียร CLO4)
+    // รับค่าและเช็คความถูกต้อง (Stability)
     printf("Enter Employee ID: ");
     if (scanf("%d", &emp.id) != 1) return 1;
     
@@ -24,13 +24,11 @@ int main() {
     printf("Enter Bonus: ");
     if (scanf("%d", &emp.bonus) != 1) return 1;
 
-    // คำนวณรายได้รวม
     emp.total_income = emp.gross_salary + emp.bonus;
 
-    // 2. เรียกฟังก์ชันคำนวณสุทธิ (ส่ง address ไป)
-    calculate_net_salary(&emp.total_income, &net_salary);
+    // เรียกฟังก์ชันและรับค่า Return มาเก็บไว้
+    net_salary = calculate_net_salary(emp.total_income);
 
-    // 3. แสดงผลรายงาน
     printf("\n--- EMPLOYEE SALARY REPORT ---\n");
     printf("ID: %d\n", emp.id);
     printf("Gross Salary: %d\n", emp.gross_salary);
@@ -41,20 +39,17 @@ int main() {
     return 0;
 }
 
-// ฟังก์ชันคำนวณรายได้สุทธิ
-void calculate_net_salary(int *total_income, int *net) {
+// ฟังก์ชันคำนวณและ Return ค่า (ตามโจทย์ข้อ 2)
+int calculate_net_salary(int total_income) {
     double tax_amount;
 
-    // CLO3: อธิบาย Logic การคิดภาษี (Why?)
-    // ถ้ารายได้รวมเกิน 30,000 บาท ต้องเสียภาษี 10%
-    if (*total_income > 30000) {
-        tax_amount = *total_income * 0.10;
-    } 
-    // ถ้ารายได้ไม่ถึงเกณฑ์ เสียภาษีแค่ 5%
-    else {
-        tax_amount = *total_income * 0.05;
+    // Logic ภาษี: รายได้เกิน 30,000 คิด 10% ถ้าน้อยกว่าคิด 5%
+    if (total_income > 30000) {
+        tax_amount = total_income * 0.10;
+    } else {
+        tax_amount = total_income * 0.05;
     }
 
-    // คำนวณรายได้สุทธิ = รายได้รวม - ภาษี (แปลงเป็น int)
-    *net = *total_income - (int)tax_amount;
+    // ส่งคืนค่าสุทธิ (รายได้รวม - ภาษี)
+    return total_income - (int)tax_amount;
 }
