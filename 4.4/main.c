@@ -2,12 +2,13 @@
 
 int main()
 {
+    //กำหนดตัวเเปรต่างๆ
     int i;
     int SIZE = 5;
     int numbers[SIZE];
     int even_count = 0;
     int odd_count = 0;
-
+//ลูปขนาดของ size เเละรับค่าไปที่ number
     for (i = 0; i < SIZE; i++)
     {
         printf("Enter integer number %d: ", i + 1);
@@ -21,7 +22,7 @@ int main()
             odd_count++;
         }
     }
-
+//ปริ้นผลลัพธ์
     printf("\n--- NUMBER CLASSIFICATION REPORT ---\n");
     printf("Recorded Numbers: ");
     for (i = 0; i < SIZE; i++)
