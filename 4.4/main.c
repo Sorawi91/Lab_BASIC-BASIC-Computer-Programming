@@ -1,37 +1,36 @@
 #include <stdio.h>
 
-int main()
-{
-    //กำหนดตัวเเปรต่างๆ
-    int i;
-    int SIZE = 5;
-    int numbers[SIZE];
-    int even_count = 0;
-    int odd_count = 0;
-//ลูปขนาดของ size เเละรับค่าไปที่ number
-    for (i = 0; i < SIZE; i++)
-    {
-        printf("Enter integer number %d: ", i + 1);
-        scanf("%d", &numbers[i]);
-        if (numbers[i] % 2 == 0)
-        {
-            even_count++;
-        }
-        else
-        {
-            odd_count++;
+#define SIZE 5
+
+int main() {
+    int data[SIZE];
+    int even = 0, odd = 0;
+    int idx;
+
+    // Input numbers
+    for (idx = 0; idx < SIZE; idx++) {
+        scanf("%d", &data[idx]);
+    }
+
+    // Analyze numbers
+    for (idx = 0; idx < SIZE; idx++) {
+        if (data[idx] % 2 == 0) {
+            even++;
+        } else {
+            odd++;
         }
     }
-//ปริ้นผลลัพธ์
-    printf("\n--- NUMBER CLASSIFICATION REPORT ---\n");
-    printf("Recorded Numbers: ");
-    for (i = 0; i < SIZE; i++)
-    {
-        printf("%d ", numbers[i]);
+
+    // Display result
+    printf("=== NUMBER REPORT ===\n");
+    printf("Numbers: ");
+    for (idx = 0; idx < SIZE; idx++) {
+        printf("%d ", data[idx]);
     }
     printf("\n");
-    printf("Total Even Numbers Found: %d\n", even_count);
-    printf("Total Odd Numbers Found: %d\n", odd_count);
+
+    printf("Even count: %d\n", even);
+    printf("Odd count: %d\n", odd);
 
     return 0;
 }
