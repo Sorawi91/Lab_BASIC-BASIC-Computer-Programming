@@ -1,49 +1,88 @@
 #include <stdio.h>
 
-// ประกาศฟังก์ชัน
-void handleDeposit(float *balance, float amount);
-void handleWithdrawal(float *balance, float amount, float penaltyFee, float *totalPenalties);
-void applyInterest(float *balance);
+// ฟังก์ชันฝากเงิน (Case 1)
+// รับค่า pointer ของ balance เพื่อให้อัปเดตค่าจริงได้
+void handleDeposit(float *balance, float amount) {
+    *balance += amount;
+    printf("Deposit: %.2f\n", amount);
+}
 
-int main()
-{
-    float initialBalance = 0.00, currentBalance = 0.00, penaltyFee = 0.00;
-    float amount = 0.00, totalPenalties = 0.00;
-    int n, i, cmdCode;
+// ฟังก์ชันถอนเงิน (Case 2)
+// รับ pointer ของ balance และ totalPenalties เพื่ออัปเดตค่า
+void handleWithdraw(float *balance, float amount, float penaltyFee, float *totalPenalties) {
+    if (amount <= *balance) {
+        *balance -= amount;
+        printf("Withdrawal: %.2f\n", amount);
+    } else {
+        *totalPenalties += penaltyFee;
+        printf("WITHDRAWAL FAILED. Penalty %.2f applied.\n", penaltyFee);
+    }
+}
 
-    // รับค่าเริ่มต้น (แยกบรรทัด return เพื่อแก้ CLO3)
-    if (scanf("%f %f %d", &initialBalance, &penaltyFee, &n) != 3) 
-    {
+// ฟังก์ชันคำนวณดอกเบี้ย (Case 3)
+void handleInterest(float *balance) {
+    float apr;
+    float interest;
+
+    if (*balance < 1000.00) {
+        apr = 1.0;
+    } else {
+        apr = 2.5;
+    }
+
+    // สูตรดอกเบี้ย: เงินต้น * (APR/100) / 12 เดือน
+    interest = *balance * (apr / 100.0) / 12.0;
+    *balance += interest;
+
+    printf("Interset: %.2f (Rate: %.2f%%)\n", interest, apr);
+}
+
+int main() {
+    // แก้ไข CLO3: แยกประกาศตัวแปรคนละบรรทัด
+    float initialBalance = 0.00;
+    float currentBalance = 0.00;
+    float PENALTY_FEE = 0.00;
+    float amount = 0.00;
+    float totalPenalties = 0.00;
+    
+    // ตัวแปร Loop และ Input
+    int N;
+    int i;
+    int cmdCode;
+
+    // รับค่าตั้งต้น
+    if (scanf("%f %f %d", &initialBalance, &PENALTY_FEE, &N) != 3) {
         return 0;
     }
 
     currentBalance = initialBalance;
     printf("Starting Balance: %.2f\n", initialBalance);
 
-    for (i = 0; i < n; i++)
-    {
-        // รับคำสั่งและจำนวนเงิน (แยกบรรทัด break เพื่อแก้ CLO3)
-        if (scanf("%d %f", &cmdCode, &amount) != 2) 
-        {
+    for (i = 0; i < N; i++) {
+        if (scanf("%d %f", &cmdCode, &amount) != 2) {
             break;
         }
 
         printf("--- Month %d ---\n", i + 1);
-      
-        switch (cmdCode)
-        {
-        case 1: // ฝากเงิน
-            handleDeposit(&currentBalance, amount);
-            break;
-        case 2: // ถอนเงิน
-            handleWithdrawal(&currentBalance, amount, penaltyFee, &totalPenalties);
-            break;
-        case 3: // คิดดอกเบี้ย
-            applyInterest(&currentBalance);
-            break;
-        default:
-            printf("Error: Invalid Command.\n");
-            break;
+
+        // แก้ไข CLO4: เรียกใช้ฟังก์ชันแทนการเขียน Logic ยาวๆ ใน switch
+        switch (cmdCode) {
+            case 1: // ฝากเงิน
+                handleDeposit(&currentBalance, amount);
+                break;
+
+            case 2: // ถอนเงิน
+                handleWithdraw(&currentBalance, amount, PENALTY_FEE, &totalPenalties);
+                break;
+
+            case 3: // คิดดอกเบี้ย
+                // ส่ง address ของ currentBalance ไปคำนวณ
+                handleInterest(&currentBalance);
+                break;
+
+            default: // Error
+                printf("Error: Invalid Command.\n");
+                break;
         }
     }
 
@@ -51,48 +90,4 @@ int main()
     printf("Total Penalties: %.2f\n", totalPenalties);
 
     return 0;
-}
-
-// ฟังก์ชันฝากเงิน
-void handleDeposit(float *balance, float amount)
-{
-    *balance += amount; 
-    printf("Deposit: %.2f\n", amount);
-}
-
-// ฟังก์ชันถอนเงิน
-void handleWithdrawal(float *balance, float amount, float penaltyFee, float *totalPenalties)
-{
-    // ใช้ปีกกาแยกบรรทัดชัดเจน
-    if (amount <= *balance)
-    {
-        *balance -= amount; // เงินพอให้ถอน
-        printf("Withdrawal: %.2f\n", amount);
-    }
-    else
-    {
-        *totalPenalties += penaltyFee; // เงินไม่พอ บวกค่าปรับ
-        printf("WITHDRAWAL FAILED. Penalty %.2f applied.\n", penaltyFee);
-    }
-}
-
-// ฟังก์ชันคิดดอกเบี้ย
-void applyInterest(float *balance)
-{
-    float apr, interest;
-
-    // แก้ไข CLO3: แยก if-else เป็นคนละบรรทัดและใส่ปีกกา
-    if (*balance < 1000.00) 
-    {
-        apr = 1.0;
-    }
-    else 
-    {
-        apr = 2.5;
-    }
-
-    interest = *balance * (apr / 100.0) / 12.0;
-    *balance += interest; // บวกดอกเบี้ยเข้าบัญชี
-
-    printf("Interest: %.2f (Rate: %.2f%%)\n", interest, apr);
 }
