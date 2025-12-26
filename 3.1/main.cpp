@@ -1,26 +1,30 @@
 #include <stdio.h>
 
+/* โครงสร้างข้อมูลสินค้า */
 struct Product
 {
-    char name[50];  // เก็บชื่อสินค้า
-    int productId;  // เก็บรหัสสินค้า
-    float price;    // เก็บราคา
+    char name[50];
+    int productId;
+    float price;
 };
 
-int main()
+int main(void)
 {
-    // 1. ประกาศตัวแปร item ชนิด struct Product
     struct Product item;
 
-    // 2. รับค่า 3 ตัว (รหัส, ราคา, ชื่อ) ใส่ลงใน struct
-    // หมายเหตุ: item.name เป็น Array อยู่แล้ว ไม่ต้องใส่ & นำหน้า
-    if (scanf("%d %f %s", &item.productId, &item.price, item.name) != 3)
+    /* รับข้อมูลสินค้า */
+    if (scanf("%d %f %49s",
+              &item.productId,
+              &item.price,
+              item.name) != 3)
     {
-        return 1; // ถ้ารับค่าไม่ครบ 3 ตัว ให้จบโปรแกรม
+        return 1;
     }
 
-    // 3. ดึงค่าจาก struct มาแสดงผล
-    printf("ID: %d, Price: %.2f, Name: %s", item.productId, item.price, item.name);
+    /* แสดงผลข้อมูลสินค้า */
+    printf("ID: %d\n", item.productId);
+    printf("Price: %.2f\n", item.price);
+    printf("Name: %s\n", item.name);
 
     return 0;
 }
