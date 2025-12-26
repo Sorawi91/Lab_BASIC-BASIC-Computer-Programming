@@ -1,45 +1,36 @@
 #include <stdio.h>
 
-int main()
-{
-    int max_temp;
-    int i, temp;
-    int DAYS = 7;
+#define DAYS 7
 
-    int daily_temp[DAYS];
+int main() {
+    int temp[DAYS];
+    int highest;
+    int day;
 
-    for (i = 0; i < DAYS; i++)
-    {
-        printf("Enter temperature for Day %d: ", i + 1);
-        scanf("%d", &daily_temp[i]);
-    }
+    // Read temperatures and track highest value
+    for (day = 0; day < DAYS; day++) {
+        scanf("%d", &temp[day]);
 
-    for (i = 0; i < DAYS; i++)
-    {
-        if (daily_temp[i] > max_temp)
-        {
-            max_temp = daily_temp[i];
+        if (day == 0 || temp[day] > highest) {
+            highest = temp[day];
         }
     }
 
-    printf("\n--- DAILY TEMPERATURE REPORT ---\n");
-    printf("Recorded Temperatures (C): ");
+    // Output report
+    printf("=== TEMPERATURE SUMMARY ===\n");
+    printf("Temperatures: ");
 
-    for (i = 0; i < DAYS; i++)
-    {
-        printf("%d ", daily_temp[i]);
+    for (day = 0; day < DAYS; day++) {
+        printf("%d ", temp[day]);
     }
 
-    printf("\n");
-    printf("Maximum Temperature Found: %d C\n", max_temp);
+    printf("\nHighest Temperature: %d C\n", highest);
 
-    if (max_temp > 35)
-    {
-        printf("Weather is HOT!");
-    }
-    else
-    {
-        printf("Weather is MODERATE.");
+    // Weather condition check
+    if (highest >= 35) {
+        printf("Weather is HOT!\n");
+    } else {
+        printf("Weather is MODERATE.\n");
     }
 
     return 0;
