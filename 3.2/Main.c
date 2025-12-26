@@ -1,41 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-// โครงสร้างสำหรับเก็บข้อมูลนักศึกษา
+// Student structure
 struct Student {
-    int studentId;      
-    // รหัสนักศึกษา
-    float score;        
-    // คะแนนสอบ
-    char name[50];      
-    // ชื่อนักศึกษา
+    int id;
+    float score;
+    char name[50];
 };
 
+// read student data
+int readStudent(struct Student *s) {
+    return scanf("%d %f %49s", &s->id, &s->score, s->name) == 3;
+}
+
+// print student data
+void printStudent(struct Student s) {
+    printf("Student ID: %d\n", s.id);
+    printf("Name: %s\n", s.name);
+    printf("Score: %.2f\n", s.score);
+    printf("--------------------\n");
+}
+
 int main() {
+    int N, i;
 
-    int N;
-    int i;
+    if (scanf("%d", &N) != 1 || N <= 0)
+        return 1;
 
-    // รับจำนวนนักศึกษา
-    scanf("%d", &N);
+    // dynamic allocation instead of VLA
+    struct Student *students = malloc(N * sizeof(struct Student));
+    if (!students)
+        return 1;
 
-    // ประกาศตัวแปรโครงสร้างข้อมูลนักศึกษา
-    struct Student students[N];
-
-    // รับข้อมูลนักศึกษาแต่ละคน
     for (i = 0; i < N; i++) {
-        scanf("%d %f %s",
-              &students[i].studentId,
-              &students[i].score,
-              students[i].name);
+        if (!readStudent(&students[i])) {
+            free(students);
+            return 1;
+        }
     }
 
-    // แสดงผลข้อมูลนักศึกษา
-    for (i = 0; i < N; i++) {
-        printf("ID: %d Score: %.2f Name: %s\n",
-               students[i].studentId,
-               students[i].score,
-               students[i].name);
-    }
+    printf("\n--- Student List ---\n");
+    for (i = 0; i < N; i++)
+        printStudent(students[i]);
 
+    free(students);
     return 0;
 }
