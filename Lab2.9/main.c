@@ -1,60 +1,67 @@
 #include <stdio.h>
+#include <string.h>
 
-int main()
-{
-    int stock;
-    float penalty;
-    float totalPenalty = 0.0;
-    int n, i, cmd, qty;
+int main() {
+    int initialStock, N;
+    int cmdCode, quantity;
+    int currentStock;
+    float PENALTY_FEE;
+    float totalPenalties = 0.0;
 
-    if (scanf("%d %f %d", &stock, &penalty, &n) != 3)
-    {
-        return 0;
+    char outputs[5000] = "";  // Store all messages here
+
+    /* Read initial values */
+    if (scanf("%d %f %d", &initialStock, &PENALTY_FEE, &N) != 3) {
+        return 1;
     }
 
-    for (i = 0; i < n; i++)
-    {
-        if (scanf("%d %d", &cmd, &qty) != 2)
-        {
-            return 0;
+    currentStock = initialStock;
+
+    /* Process commands and record outputs */
+    for (int i = 0; i < N; i++) {
+        if (scanf("%d %d", &cmdCode, &quantity) != 2) {
+            return 1;
         }
 
-        switch (cmd)
-        {
-        case 1:
-            // รับของเข้า
-            stock = stock + qty;
-            printf("Received %d units.\n", qty);
-            break;
+        char buffer[256];  // temporary message
 
-        case 2:
-            // เอาของออก
-            if (qty <= 0)
-            {
-                printf("Error: Quantity must be positive.\n");
-            }
-            else if (qty <= stock)
-            {
-                stock = stock - qty;
-                printf("Shipped %d units.\n", qty);
-            }
-            else
-            {
-                totalPenalty = totalPenalty + penalty;
-                printf("FAILURE: Insufficient stock. PENALTY %.2f added.\n", penalty);
-            }
-            break;
+        switch (cmdCode) {
+            case 1:  /* Receive stock */
+                currentStock += quantity;
+                sprintf(buffer, "Received %d units.\n", quantity);
+                strcat(outputs, buffer);
+                break;
 
-        case 3:
-            printf("Current Stock: %d\n", stock);
-            printf("Total Penalties: %.2f\n", totalPenalty);
-            break;
+            case 2:  /* Ship stock */
+                if (quantity <= 0) {
+                    sprintf(buffer, "Error: Quantity must be positive.\n");
+                } else if (quantity <= currentStock) {
+                    currentStock -= quantity;
+                    sprintf(buffer, "Shipped %d units.\n", quantity);
+                } else {
+                    totalPenalties += PENALTY_FEE;
+                    sprintf(buffer, "FAILURE: Insufficient stock. PENALTY %.2f added.\n", PENALTY_FEE);
+                }
+                strcat(outputs, buffer);
+                break;
 
-        default:
-            printf("Error invalid command.\n");
-            break;
+            case 3:  /* Check status */
+                sprintf(buffer, "Current Stock: %d\nTotal Penalties: %.2f\n", currentStock, totalPenalties);
+                strcat(outputs, buffer);
+                break;
+
+            default: /* Invalid command */
+                sprintf(buffer, "Error: Invalid Command.\n");
+                strcat(outputs, buffer);
+                break;
         }
     }
+
+    /* Print all results at once */
+    printf("%s", outputs);
+    printf("\n--- Final Summary ---\n");
+    printf("Final Stock: %d\n", currentStock);
+    printf("Total Penalties: %.2f\n", totalPenalties);
 
     return 0;
 }
