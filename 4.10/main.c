@@ -1,13 +1,11 @@
 #include <stdio.h>
 
-#define ROWS 3
-#define COLS 3
-
 int main() {
-    int data[ROWS][COLS];
+    int ROWS = 3;
+    int COLS = 3;
     int i, j;
+    int data[ROWS][COLS];
 
-    // ส่วนการรับข้อมูล (Input)
     printf("Enter %d integer numbers for the 3x3 array:\n", ROWS * COLS);
 
     for (i = 0; i < ROWS; i++) {
@@ -17,24 +15,19 @@ int main() {
         }
     }
 
-    // ส่วนการแสดงผล (Report)
     printf("\n--- TWO-DIMENSIONAL ARRAY REPORT ---\n");
     printf("Array Size: %d Rows x %d Columns\n", ROWS, COLS);
     printf("Content (Table Format):\n");
 
-    // ลูปแสดงผลเป็นตาราง
-    for (i = 0; i < ROWS; i++) {        
-        // Loop นอก: ควบคุมแถว (Row)
-        for (j = 0; j < COLS; j++) {    
-            // Loop ใน: ควบคุมคอลัมน์ (Column)
-            printf("%d ", data[i][j]);  
-            // ปริ้นตัวเลขตามด้วยช่องว่าง
+    // ROWS เเถว ลูปเเภว
+    for (i = 0; i < ROWS ; i++) {
+        //COLS ลูปหลัก
+        for (j = 0;j < COLS ; j++) {
+            printf("%d ",data[i][j]);
         }
-        printf("\n"); 
-        // เมื่อจบ Loop ใน (ครบ 1 แถว) ให้ขึ้นบรรทัดใหม่
+        // พอจบลูปหลักเเล้วก็ให้ขึ้นบรรทัดใหม่
+        printf("\n");
     }
 
     return 0;
 }
-
-
