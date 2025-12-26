@@ -1,53 +1,46 @@
 #include <stdio.h>
-//สร้าง struct ไว้เก็บ Employee
+
+/* Employee structure */
 struct Employee {
     int id;
-    int gross_salary;
+    int salary;
     int bonus;
-    int total_income;
 };
 
-//สร้างฟังชั่น
-int calculate_net_salary(int *total_income , int *net);
-
+/* Function prototype */
+int netIncome(struct Employee e);
 
 int main() {
-    //กำหนดเเละสร้างตัวเเปร
     struct Employee emp;
-    int net_salary;
+    int net;
 
-    
-    printf("Enter Employee ID: ");
+    // Input
     scanf("%d", &emp.id);
-    
-    printf("Enter Gross Salary: ");
-    scanf("%d", &emp.gross_salary);
-    
-    printf("Enter Bonus: ");
+    scanf("%d", &emp.salary);
     scanf("%d", &emp.bonus);
 
-    //คำนวน
-    emp.total_income = emp.gross_salary + emp.bonus;
+    // Calculate net income
+    net = netIncome(emp);
 
-    calculate_net_salary(&emp.total_income,&net_salary);
-    //เเสดงผล
-    printf("\n--- EMPLOYEE SALARY REPORT ---\n");
-    printf("ID: %d\n", emp.id);
-    printf("Gross Salary: %d\n", emp.gross_salary);
-    printf("Bonus: %d\n", emp.bonus);
-    printf("Total Income: %d\n", emp.total_income);
-    printf("Net Salary: %d\n", net_salary);
+    // Output
+    printf("\n--- EMPLOYEE SUMMARY ---\n");
+    printf("Employee ID: %d\n", emp.id);
+    printf("Base Salary: %d\n", emp.salary);
+    printf("Bonus Earned: %d\n", emp.bonus);
+    printf("Net Income: %d\n", net);
 
     return 0;
 }
 
-//สร้างฝั่งชั่นเพื่อเช็ค net 
-int calculate_net_salary(int *total_income , int *net){
-    double tax_amount;
-    if (*total_income > 30000) {
-        tax_amount = *total_income * 0.10;
-    } else {
-        tax_amount = *total_income * 0.05;
-    }
-    *net = *total_income - (int)tax_amount;
+/* Calculate net income after tax */
+int netIncome(struct Employee e) {
+    int total = e.salary + e.bonus;
+    float taxRate;
+
+    if (total > 30000)
+        taxRate = 0.10;
+    else
+        taxRate = 0.05;
+
+    return (int)(total * (1 - taxRate));
 }
