@@ -1,81 +1,58 @@
 #include <stdio.h>
 
-/* ฟังก์ชันรับของเข้า */
-void receiveStock(int *stock, int quantity)
-{
-    *stock = *stock + quantity;
-    printf("Received %d units.\n", quantity);
-}
-
-/* ฟังก์ชันส่งของออก */
-void shipStock(int *stock, int quantity, float penaltyFee, float *totalPenalty)
-{
-    if (quantity <= 0)
-    {
-        printf("Error: Quantity must be positive.\n");
-    }
-    else if (quantity <= *stock)
-    {
-        *stock = *stock - quantity;
-        printf("Shipped %d units.\n", quantity);
-    }
-    else
-    {
-        /* เพิ่มค่าปรับเมื่อของในสต็อกไม่พอ */
-        *totalPenalty = *totalPenalty + penaltyFee;
-        printf(
-            "FAILURE: Insufficient stock. PENALTY %.2f added.\n",
-            penaltyFee
-        );
-    }
-}
-
-/* ฟังก์ชันรายงานผล */
-void reportStatus(int stock, float totalPenalty)
-{
-    printf("Current Stock: %d\n", stock);
-    printf("Total Penalties: %.2f\n", totalPenalty);
-}
-
 int main()
 {
     int stock;
-    int commandCount;
-    float penaltyFee;
+    float penalty;
     float totalPenalty = 0.0;
+    int n, i, cmd, qty;
 
-    int command;
-    int quantity;
-
-    /* รับค่าเริ่มต้น */
-    if (scanf("%d %f %d", &stock, &penaltyFee, &commandCount) != 3)
+    if (scanf("%d %f %d", &stock, &penalty, &n) != 3)
     {
         return 0;
     }
 
-    /* วนลูปรับคำสั่ง */
-    for (int i = 0; i < commandCount; i++)
+    for (i = 0; i < n; i++)
     {
-        if (scanf("%d %d", &command, &quantity) != 2)
+        if (scanf("%d %d", &cmd, &qty) != 2)
         {
-            break;
+            return 0;
         }
 
-        if (command == 1)
+        switch (cmd)
         {
-            receiveStock(&stock, quantity);
-        }
-        else if (command == 2)
-        {
-            shipStock(&stock, quantity, penaltyFee, &totalPenalty);
-        }
-        else if (command == 3)
-        {
-            reportStatus(stock, totalPenalty);
-        }
-        else
-        {
-            printf("Error: Invalid command.\n");
+        case 1:
+            // รับของเข้า
+            stock = stock + qty;
+            printf("Received %d units.\n", qty);
+            break;
+
+        case 2:
+            // เอาของออก
+            if (qty <= 0)
+            {
+                printf("Error: Quantity must be positive.\n");
+            }
+            else if (qty <= stock)
+            {
+                stock = stock - qty;
+                printf("Shipped %d units.\n", qty);
+            }
+            else
+            {
+                totalPenalty = totalPenalty + penalty;
+                printf("FAILURE: Insufficient stock. PENALTY %.2f added.\n", penalty);
+            }
+            break;
+
+        case 3:
+            printf("Current Stock: %d\n", stock);
+            printf("Total Penalties: %.2f\n", totalPenalty);
+            break;
+
+        default:
+            printf("Error invalid command.\n");
+            break;
         }
     }
 
