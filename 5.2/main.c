@@ -41,6 +41,7 @@ int main() {
     return 0;
 }
 
+//สร้างฝั่งชั่นเพื่อเช็ค net 
 int calculate_net_salary(int *total_income , int *net){
     double tax_amount;
     if (*total_income > 30000) {
