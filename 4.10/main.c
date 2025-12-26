@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// กำหนดค่าคงที่สำหรับขนาด Array ตามโจทย์ (3x3)
 #define ROWS 3
 #define COLS 3
 
@@ -37,4 +36,5 @@ int main() {
 
     return 0;
 }
+
 
